@@ -38,7 +38,7 @@ jobs:
           command: npm install firebase-tools
       - run:
           name: Deploy to firebase
-          command: ./node_modules/.bin/firebase deploy --token="$FIREBASE_DEPLOY_TOKEN"
+          command: pwd && ls -a && ./node_modules/.bin/firebase deploy --token="$FIREBASE_DEPLOY_TOKEN"
 workflows:
   version: 2
   test-deploy:
