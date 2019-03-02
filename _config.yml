@@ -19,3 +19,5 @@ exclude:
   - .firebaserc
   - firebase-debug.log
   - .firebase/
+  - Gemfile
+  - Gemfile.lock
