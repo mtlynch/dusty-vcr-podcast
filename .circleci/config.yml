@@ -4,7 +4,7 @@ defaults: &defaults
 jobs:
   build:
     docker:
-      - image: cibuilds/jekyll:3.85
+      - image: cibuilds/jekyll:3.8.5
     steps:
       - checkout
       - run: jekyll exec jekyll build
