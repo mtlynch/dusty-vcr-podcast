@@ -26,3 +26,27 @@ jobs:
           root: ./
           paths:
             - _site
+  deploy:
+    <<: *defaults
+    docker:
+      - image: circleci/node:8.12
+    steps:
+      - attach_workspace:
+          at: ./
+      - run:
+          name: Install firebase-tools
+          command: npm install firebase-tools
+      - run:
+          name: Deploy to firebase
+          command: ./node_modules/.bin/firebase deploy --token="$FIREBASE_DEPLOY_TOKEN"
+workflows:
+  version: 2
+  test-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
