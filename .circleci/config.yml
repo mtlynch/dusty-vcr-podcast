@@ -1,0 +1,10 @@
+version: 2
+defaults: &defaults
+  working_directory: ~/repo
+jobs:
+  build:
+    docker:
+      - image: cibuilds/jekyll:3.85
+    steps:
+      - checkout
+      - run: jekyll exec jekyll build

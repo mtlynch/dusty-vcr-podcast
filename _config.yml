@@ -19,6 +19,5 @@ exclude:
   - .firebaserc
   - firebase-debug.log
   - .firebase/
-  - circle.yml
   - Gemfile
   - Gemfile.lock
