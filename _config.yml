@@ -1,0 +1,15 @@
+title: Dusty VCR Podcast
+email: contact@dustyvcr.com
+description: >-
+  Dusty VCR is a podcast about the nineties movies we grew up with. It's hosted
+  by Michael Lynch, Rachel Lynch, and Xena Dreyfuss.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://dustyvrc.com"
+twitter_username: thedustyvcr
+github_username:
+
+# Build settings
+markdown: kramdown
+theme: garth-jekyll-theme
+plugins:
+  - jekyll-feed
