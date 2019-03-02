@@ -22,7 +22,7 @@ jobs:
             gem install bundler
       - run:
           name: Bundle Install
-          command: bundle check || bundle install "$BUNDLE_PATH"
+          command: bundle check || bundle install --path "$BUNDLE_PATH"
       - save_cache:
           key: rubygems-v1-{{ checksum "Gemfile.lock" }}
           paths:
