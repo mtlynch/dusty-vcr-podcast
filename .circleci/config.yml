@@ -10,10 +10,6 @@ jobs:
       BUNDLE_PATH: ~/repo/_vendor/bundle
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - rubygems-v1-{{ checksum "Gemfile.lock" }}
-            - rubygems-v1-fallback
       - run:
           name: Configure Bundler
           command: |
@@ -23,10 +19,6 @@ jobs:
       - run:
           name: Bundle Install
           command: bundle check || bundle install --path "$BUNDLE_PATH"
-      - save_cache:
-          key: rubygems-v1-{{ checksum "Gemfile.lock" }}
-          paths:
-            - vendor/bundle
       - run:
           name: Jekyll build
           command: bundle exec jekyll build
