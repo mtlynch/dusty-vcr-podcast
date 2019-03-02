@@ -26,6 +26,8 @@ jobs:
           root: ./
           paths:
             - _site
+            - firebase.json
+            - .firebaserc
   deploy:
     <<: *defaults
     docker:
