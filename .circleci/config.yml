@@ -32,7 +32,7 @@ jobs:
       - save_cache:
           key: rubygems-{{ .Environment.CIRCLE_CACHE_VERSION }}-{{ checksum "Gemfile.lock" }}
           paths:
-            - << bundle-path >>
+            - << bundle_path >>
       - run:
           name: Jekyll build
           command: bundle exec jekyll build
