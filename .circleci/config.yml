@@ -6,12 +6,12 @@ jobs:
     <<: *defaults
     docker:
       - image: circleci/ruby:2.4.4
+    environment:
+      BUNDLE_PATH: ~/repo/_vendor/bundle
     parameters:
       bundle_path:
-        type: string
-        default: ~/repo/_vendor/bundle
-    environment:
-      BUNDLE_PATH: << bundle_path >>
+        type: env_var_name
+        default: BUNDLE_PATH
     steps:
       - checkout
       - restore_cache:
