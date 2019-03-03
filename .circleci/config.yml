@@ -24,7 +24,7 @@ jobs:
           name: Bundle Install
           command: bundle check || bundle install
       - save_cache:
-          key: rubygems-{{ checksum "Gemfile.lock" }}
+          key: rubygems-{{ .Environment.CIRCLE_CACHE_VERSION }}-{{ checksum "Gemfile.lock" }}
           paths:
             - "{{ .Environment.BUNDLE_PATH }}"
       - run:
