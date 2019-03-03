@@ -17,6 +17,9 @@ jobs:
             - rubygems-{{ .Environment.CIRCLE_CACHE_VERSION }}-{{ checksum "Gemfile.lock" }}
             - rubygems-{{ .Environment.CIRCLE_CACHE_VERSION }}
       - run:
+        name: "Echo bundle_path"
+        command: echo << bundle_path >>
+      - run:
           name: Configure Bundler
           command: |
             echo 'export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")' >> "$BASH_ENV"
