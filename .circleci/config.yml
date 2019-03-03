@@ -8,6 +8,10 @@ jobs:
       - image: circleci/ruby:2.4.4
     environment:
       BUNDLE_PATH: ~/repo/_vendor/bundle
+    parameters:
+      bundle-path:
+        type: env_var_name
+        default: BUNDLE_PATH
     steps:
       - checkout
       - restore_cache:
@@ -26,7 +30,7 @@ jobs:
       - save_cache:
           key: rubygems-{{ checksum "Gemfile.lock" }}
           paths:
-            - "{{ .Environment.BUNDLE_PATH }}"
+            - << bundle-path >>
       - run:
           name: Jekyll build
           command: bundle exec jekyll build
