@@ -6,12 +6,10 @@ jobs:
     <<: *defaults
     docker:
       - image: circleci/ruby:2.4.4
-    environment:
-      BUNDLE_PATH: ~/repo/_vendor/bundle
     parameters:
-      bundle-path:
-        type: env_var_name
-        default: BUNDLE_PATH
+      bundle_path:
+        type: string
+        default: ~/repo/_vendor/bundle
     steps:
       - checkout
       - restore_cache:
@@ -22,6 +20,7 @@ jobs:
           name: Configure Bundler
           command: |
             echo 'export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")' >> $BASH_ENV
+            echo 'export BUNDLE_PATH=<< bundle_path >>' >> $BASH_ENV
             source $BASH_ENV
             gem install bundler
       - run:
