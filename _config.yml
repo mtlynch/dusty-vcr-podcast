@@ -8,6 +8,7 @@ url: "https://dustyvcr.com"
 permalink: /:title/
 twitter_username: thedustyvcr
 github_username:
+future: true
 
 # Build settings
 markdown: kramdown
