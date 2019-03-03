@@ -12,7 +12,7 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - rubygems-{{ .Environment.CIRCLE_CACHE_VERSION}}-{{ checksum "Gemfile.lock" }}
+            - rubygems-{{ .Environment.CIRCLE_CACHE_VERSION }}-{{ checksum "Gemfile.lock" }}
             - rubygems-{{ .Environment.CIRCLE_CACHE_VERSION }}
       - run:
           name: Configure Bundler
