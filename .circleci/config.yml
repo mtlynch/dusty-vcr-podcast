@@ -12,8 +12,8 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - rubygems-{{ checksum "Gemfile.lock" }}
-            - rubygems-
+            - rubygems-{{ .Environment.CIRCLE_CACHE_VERSION}}-{{ checksum "Gemfile.lock" }}
+            - rubygems-{{ .Environment.CIRCLE_CACHE_VERSION }}
       - run:
           name: Configure Bundler
           command: |
@@ -26,7 +26,7 @@ jobs:
       - save_cache:
           key: rubygems-{{ checksum "Gemfile.lock" }}
           paths:
-            - "$BUNDLE_PATH"
+            - {{ .Environment.BUNDLE_PATH }}
       - run:
           name: Jekyll build
           command: bundle exec jekyll build
