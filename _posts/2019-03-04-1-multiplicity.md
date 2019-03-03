@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Episode 1: Multiplicity"
-date: 2019-02-24 19:20:00 -0500
+date: 2019-03-04 00:00:00 -0500
 categories:
   - episodes
 ---
