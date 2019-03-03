@@ -10,6 +10,8 @@ jobs:
       bundle_path:
         type: string
         default: ~/repo/_vendor/bundle
+    environment:
+      BUNDLE_PATH: << bundle_path >>
     steps:
       - checkout
       - restore_cache:
@@ -23,8 +25,7 @@ jobs:
           name: Configure Bundler
           command: |
             echo 'export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")' >> "$BASH_ENV"
-            echo 'export BUNDLE_PATH='<< bundle_path >> >> "$BASH_ENV"
-            source $BASH_ENV
+            source "$BASH_ENV"
             gem install bundler
       - run:
           name: Bundle Install
