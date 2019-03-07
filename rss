@@ -4,7 +4,7 @@
 		<atom:link href="https://dustyvcr.com/rss" rel="self" type="application/rss+xml"/>
 		<title>Dusty VCR</title>
 		<pubDate>Thu, 07 Mar 2019 02:21:16 +0000</pubDate>
-		<lastBuildDate>Thu, 07 Mar 2019 02:50:24 +0000</lastBuildDate>
+		<lastBuildDate>Thu, 07 Mar 2019 02:58:17 +0000</lastBuildDate>
 		<generator>Libsyn WebEngine 2.0</generator>
 		<link>https://dustyvcr.com</link>
 		<language>en</language>
@@ -17,12 +17,18 @@
 			<title>Dusty VCR</title>
 			<link><![CDATA[https://dustyvcr.com]]></link>
 		</image>
-		<itunes:author></itunes:author>
+		<itunes:author>Dusty VCR</itunes:author>
 		<itunes:keywords>movies,nostalgia</itunes:keywords>
+		<itunes:category text="TV &amp; Film"/>
+		<itunes:category text="Comedy"/>
 		<itunes:image href="https://ssl-static.libsyn.com/p/assets/f/e/9/d/fe9d6125818ba319/2019-03-04.jpg" />
-		<itunes:explicit>no</itunes:explicit>
+		<itunes:explicit>yes</itunes:explicit>
+		<itunes:owner>
+			<itunes:name><![CDATA[Michael Lynch]]></itunes:name>
+			<itunes:email>michael@dustyvcr.com</itunes:email>
+		</itunes:owner>
 		<description><![CDATA[Dusty VCR is a podcast about the movies we grew up with. It’s hosted by Michael Lynch, Rachel Lynch, and Xena Dreyfuss.]]></description>
-		<itunes:subtitle><![CDATA[]]></itunes:subtitle>
+		<itunes:subtitle><![CDATA[A podcast about the movies we grew up with]]></itunes:subtitle>
 		<itunes:type>episodic</itunes:type>
 				<item>
 			<title>#1 Multiplicity</title>
@@ -30,7 +36,7 @@
 			<pubDate>Thu, 07 Mar 2019 02:21:16 +0000</pubDate>
 			<guid isPermaLink="false"><![CDATA[b52d4c7306ec48d2a9c52db7549b6029]]></guid>
 			<link><![CDATA[https://dustyvcr.com/1-multiplicity/]]></link>
-			<itunes:image href="https://ssl-static.libsyn.com/p/assets/0/9/7/c/097cd026dbfa19fd/2019-03-04.jpg" />
+			<itunes:image href="https://ssl-static.libsyn.com/p/assets/f/e/9/d/fe9d6125818ba319/2019-03-04.jpg" />
 			<description><![CDATA[<p>In the premiere episode of <em>Dusty VCR</em>, Michael, Rachel, and Xena discuss the 1999 film, <em>Multiplicity</em>, starring Michael Keaton and Andie MacDowell.</p> <p>The Dusty VCR gang decides whether this film has held up, 20 years later, and what kind of personalities their own clones might have.</p>]]></description>
 			<content:encoded><![CDATA[<p>In the premiere episode of <em>Dusty VCR</em>, Michael, Rachel, and Xena discuss the 1999 film, <em>Multiplicity</em>, starring Michael Keaton and Andie MacDowell.</p> <p>The Dusty VCR gang decides whether this film has held up, 20 years later, and what kind of personalities their own clones might have.</p>]]></content:encoded>
 			<enclosure length="109668427" type="audio/mpeg" url="https://traffic.libsyn.com/secure/dustyvcr/1-multiplicity.mp3?dest-id=1134443" />
