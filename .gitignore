@@ -18,3 +18,4 @@ assets/js/script-compiled.js
 images/resized/
 .firebase/
 firebase-debug.log
+_vendor/

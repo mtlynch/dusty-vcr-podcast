@@ -43,7 +43,14 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
+    mdl (0.5.0)
+      kramdown (~> 1.12, >= 1.12.0)
+      mixlib-cli (~> 1.7, >= 1.7.0)
+      mixlib-config (~> 2.2, >= 2.2.1)
     mercenary (0.3.6)
+    mixlib-cli (1.7.0)
+    mixlib-config (2.2.18)
+      tomlrb
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (3.0.3)
@@ -58,6 +65,7 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
+    tomlrb (1.2.8)
 
 PLATFORMS
   ruby
@@ -66,6 +74,7 @@ DEPENDENCIES
   garth-jekyll-theme (~> 1.0.2)
   jekyll (~> 3.8.5)
   jekyll-feed (~> 0.11.0)
+  mdl (= 0.5.0)
 
 BUNDLED WITH
    2.0.1

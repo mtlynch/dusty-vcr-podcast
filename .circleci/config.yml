@@ -24,6 +24,9 @@ jobs:
       - run:
           name: Bundle Install
           command: bundle check || bundle install
+      - run:
+          name: Lint Markdown
+          command: _tests/lint-markdown
       - save_cache:
           key: rubygems-{{ .Environment.CIRCLE_CACHE_VERSION }}-{{ checksum "Gemfile.lock" }}
           paths:
