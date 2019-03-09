@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Exit on first failing command.
-set -e
 # Echo commands to console.
 set -x
+# Exit on first failing command.
+set -e
 # Exit on unset variable.
 set -u
 
