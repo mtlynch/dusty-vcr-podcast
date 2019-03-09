@@ -4,6 +4,9 @@ all
 # MD001 Header levels should only increment by one level at a time
 exclude_rule 'MD001'
 
+# MD002 First header should be a top level header
+exclude_rule 'MD002'
+
 # MD013 - Line length.
 exclude_rule 'MD013'
 

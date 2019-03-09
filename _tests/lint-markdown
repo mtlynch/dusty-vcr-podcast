@@ -8,7 +8,5 @@ set -x
 set -u
 
 # Execute Markdown Linter
-bundler exec mdl \
-  _pages \
-  _posts \
+bundler exec mdl $(find -name "*.md" -not -path "./_vendor/*") \
   --style _linter/markdown-linter-style.rb
