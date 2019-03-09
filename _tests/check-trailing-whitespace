@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Echo commands to console.
+set -x
+# Exit on first failing command.
+set -e
+# Exit on unset variable.
+set -u
+
+# Check for trailing whitespace
+if egrep \
+  "\s$" \
+  --line-number \
+  --binary-files=without-match \
+  --dereference-recursive \
+  --exclude-dir={.git,_site,_vendor} \
+  --exclude=rss \
+  ./ ; then
+  echo "ERROR: Found trailing whitespace";
+  exit 1;
+fi

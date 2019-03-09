@@ -27,6 +27,9 @@ jobs:
       - run:
           name: Lint Markdown
           command: _tests/lint-markdown
+      - run:
+          name: Check for trailing whitespace
+          command: _tests/check-trailing-whitespace
       - save_cache:
           key: rubygems-{{ .Environment.CIRCLE_CACHE_VERSION }}-{{ checksum "Gemfile.lock" }}
           paths:
