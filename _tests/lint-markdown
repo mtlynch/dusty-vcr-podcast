@@ -8,4 +8,7 @@ set -x
 set -u
 
 # Execute Markdown Linter
-mdl _posts _pages --style _linter/markdown-linter-style.rb
+bundler exec mdl \
+  _pages \
+  _posts \
+  --style _linter/markdown-linter-style.rb
