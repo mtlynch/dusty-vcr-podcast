@@ -3,8 +3,8 @@
 	<channel>
 		<atom:link href="https://dustyvcr.com/rss" rel="self" type="application/rss+xml"/>
 		<title>Dusty VCR</title>
-		<pubDate>Thu, 07 Mar 2019 02:21:16 +0000</pubDate>
-		<lastBuildDate>Thu, 07 Mar 2019 02:58:17 +0000</lastBuildDate>
+		<pubDate>Wed, 13 Mar 2019 20:50:27 +0000</pubDate>
+		<lastBuildDate>Wed, 13 Mar 2019 20:58:52 +0000</lastBuildDate>
 		<generator>Libsyn WebEngine 2.0</generator>
 		<link>https://dustyvcr.com</link>
 		<language>en</language>
@@ -31,6 +31,28 @@
 		<itunes:subtitle><![CDATA[A podcast about the movies we grew up with]]></itunes:subtitle>
 		<itunes:type>episodic</itunes:type>
 				<item>
+			<title>#2 Monkey Trouble</title>
+			<itunes:title>Monkey Trouble</itunes:title>
+			<pubDate>Wed, 13 Mar 2019 20:50:27 +0000</pubDate>
+			<guid isPermaLink="false"><![CDATA[c61e27ef9de34c4bbee95867b2f49c00]]></guid>
+			<link><![CDATA[https://traffic.libsyn.com/secure/dustyvcr/2-monkey-trouble.mp3]]></link>
+			<itunes:image href="https://ssl-static.libsyn.com/p/assets/f/e/9/d/fe9d6125818ba319/2019-03-04.jpg" />
+			<description><![CDATA[<p>We re-watch the 1994 marsupial classic, <em>Monkey Trouble</em>, starring Thora Birch and Harvey Keitel.</p> <p>We talk about how stressful action is in a children's movie, we marvel at top-notch monkey acting, and we decide what type of trouble we would get into if we ourselves were monkeys.</p>]]></description>
+			<content:encoded><![CDATA[<p>We re-watch the 1994 marsupial classic, <em>Monkey Trouble</em>, starring Thora Birch and Harvey Keitel.</p> <p>We talk about how stressful action is in a children's movie, we marvel at top-notch monkey acting, and we decide what type of trouble we would get into if we ourselves were monkeys.</p>]]></content:encoded>
+			<enclosure length="70637277" type="audio/mpeg" url="https://traffic.libsyn.com/secure/dustyvcr/2-monkey-trouble.mp3?dest-id=1134443" />
+			<itunes:duration>48:29</itunes:duration>
+			<itunes:explicit>yes</itunes:explicit>
+			<itunes:keywords>monkey,monkeys,harvey,trouble,birch,thora,keitel</itunes:keywords>
+			<itunes:subtitle><![CDATA[Of all the movies starring Harvey Keitel and a monkey, this one is the best.]]></itunes:subtitle>
+			<itunes:summary>We re-watch the 1994 marsupial classic, Monkey Trouble, starring Thora Birch and Harvey Keitel.
+
+We talk about how stressful action is in a children's movie, we marvel at top-notch monkey acting, and we decide what type of trouble we would get into if we ourselves were monkeys.</itunes:summary>
+			<itunes:season>1</itunes:season>
+			<itunes:episode>2</itunes:episode>
+			<itunes:episodeType>full</itunes:episodeType>
+			<itunes:author>Dusty VCR</itunes:author>
+					</item>
+		<item>
 			<title>#1 Multiplicity</title>
 			<itunes:title>Multiplicity</itunes:title>
 			<pubDate>Thu, 07 Mar 2019 02:21:16 +0000</pubDate>
