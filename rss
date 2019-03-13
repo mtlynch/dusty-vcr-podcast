@@ -4,7 +4,7 @@
 		<atom:link href="https://dustyvcr.com/rss" rel="self" type="application/rss+xml"/>
 		<title>Dusty VCR</title>
 		<pubDate>Wed, 13 Mar 2019 20:50:27 +0000</pubDate>
-		<lastBuildDate>Wed, 13 Mar 2019 20:58:52 +0000</lastBuildDate>
+		<lastBuildDate>Wed, 13 Mar 2019 21:45:38 +0000</lastBuildDate>
 		<generator>Libsyn WebEngine 2.0</generator>
 		<link>https://dustyvcr.com</link>
 		<language>en</language>
@@ -39,8 +39,8 @@
 			<itunes:image href="https://ssl-static.libsyn.com/p/assets/f/e/9/d/fe9d6125818ba319/2019-03-04.jpg" />
 			<description><![CDATA[<p>We re-watch the 1994 marsupial classic, <em>Monkey Trouble</em>, starring Thora Birch and Harvey Keitel.</p> <p>We talk about how stressful action is in a children's movie, we marvel at top-notch monkey acting, and we decide what type of trouble we would get into if we ourselves were monkeys.</p>]]></description>
 			<content:encoded><![CDATA[<p>We re-watch the 1994 marsupial classic, <em>Monkey Trouble</em>, starring Thora Birch and Harvey Keitel.</p> <p>We talk about how stressful action is in a children's movie, we marvel at top-notch monkey acting, and we decide what type of trouble we would get into if we ourselves were monkeys.</p>]]></content:encoded>
-			<enclosure length="70637277" type="audio/mpeg" url="https://traffic.libsyn.com/secure/dustyvcr/2-monkey-trouble.mp3?dest-id=1134443" />
-			<itunes:duration>48:29</itunes:duration>
+			<enclosure length="69523804" type="audio/mpeg" url="https://traffic.libsyn.com/secure/dustyvcr/2-monkey-trouble.mp3?dest-id=1134443" />
+			<itunes:duration>48:17</itunes:duration>
 			<itunes:explicit>yes</itunes:explicit>
 			<itunes:keywords>monkey,monkeys,harvey,trouble,birch,thora,keitel</itunes:keywords>
 			<itunes:subtitle><![CDATA[Of all the movies starring Harvey Keitel and a monkey, this one is the best.]]></itunes:subtitle>
