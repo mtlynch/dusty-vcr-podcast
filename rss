@@ -4,7 +4,7 @@
 		<atom:link href="https://dustyvcr.com/rss" rel="self" type="application/rss+xml"/>
 		<title>Dusty VCR</title>
 		<pubDate>Wed, 13 Mar 2019 20:50:27 +0000</pubDate>
-		<lastBuildDate>Wed, 13 Mar 2019 21:45:38 +0000</lastBuildDate>
+		<lastBuildDate>Sat, 16 Mar 2019 23:41:46 +0000</lastBuildDate>
 		<generator>Libsyn WebEngine 2.0</generator>
 		<link>https://dustyvcr.com</link>
 		<language>en</language>
@@ -39,7 +39,7 @@
 			<itunes:image href="https://ssl-static.libsyn.com/p/assets/f/e/9/d/fe9d6125818ba319/2019-03-04.jpg" />
 			<description><![CDATA[<p>We re-watch the 1994 marsupial classic, <em>Monkey Trouble</em>, starring Thora Birch and Harvey Keitel.</p> <p>We talk about how stressful action is in a children's movie, we marvel at top-notch monkey acting, and we decide what type of trouble we would get into if we ourselves were monkeys.</p>]]></description>
 			<content:encoded><![CDATA[<p>We re-watch the 1994 marsupial classic, <em>Monkey Trouble</em>, starring Thora Birch and Harvey Keitel.</p> <p>We talk about how stressful action is in a children's movie, we marvel at top-notch monkey acting, and we decide what type of trouble we would get into if we ourselves were monkeys.</p>]]></content:encoded>
-			<enclosure length="69523804" type="audio/mpeg" url="https://traffic.libsyn.com/secure/dustyvcr/2-monkey-trouble.mp3?dest-id=1134443" />
+			<enclosure length="69523226" type="audio/mpeg" url="https://traffic.libsyn.com/secure/dustyvcr/2-monkey-trouble.mp3?dest-id=1134443" />
 			<itunes:duration>48:17</itunes:duration>
 			<itunes:explicit>yes</itunes:explicit>
 			<itunes:keywords>monkey,monkeys,harvey,trouble,birch,thora,keitel</itunes:keywords>
@@ -61,7 +61,7 @@ We talk about how stressful action is in a children's movie, we marvel at top-no
 			<itunes:image href="https://ssl-static.libsyn.com/p/assets/f/e/9/d/fe9d6125818ba319/2019-03-04.jpg" />
 			<description><![CDATA[<p>In the premiere episode of <em>Dusty VCR</em>, Michael, Rachel, and Xena discuss the 1999 film, <em>Multiplicity</em>, starring Michael Keaton and Andie MacDowell.</p> <p>The Dusty VCR gang decides whether this film has held up, 20 years later, and what kind of personalities their own clones might have.</p>]]></description>
 			<content:encoded><![CDATA[<p>In the premiere episode of <em>Dusty VCR</em>, Michael, Rachel, and Xena discuss the 1999 film, <em>Multiplicity</em>, starring Michael Keaton and Andie MacDowell.</p> <p>The Dusty VCR gang decides whether this film has held up, 20 years later, and what kind of personalities their own clones might have.</p>]]></content:encoded>
-			<enclosure length="109668427" type="audio/mpeg" url="https://traffic.libsyn.com/secure/dustyvcr/1-multiplicity.mp3?dest-id=1134443" />
+			<enclosure length="77465912" type="audio/mpeg" url="https://traffic.libsyn.com/secure/dustyvcr/1-multiplicity.mp3?dest-id=1134443" />
 			<itunes:duration>53:48</itunes:duration>
 			<itunes:explicit>yes</itunes:explicit>
 			<itunes:keywords>clones,multiplicity</itunes:keywords>
