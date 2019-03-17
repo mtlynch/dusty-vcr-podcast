@@ -9,6 +9,8 @@ permalink: /:title/
 twitter_username: thedustyvcr
 github_username:
 future: true
+logo: "/assets/img/logo.jpg"
+favicon: "/assets/img/favicon/favicon.ico"
 
 # Build settings
 markdown: kramdown
