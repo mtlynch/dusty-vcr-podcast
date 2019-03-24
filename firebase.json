@@ -22,6 +22,11 @@
         "key" : "Cache-Control",
         "value" : "max-age=300"
       } ]
-    } ]
+    } ],
+  "redirects": [ {
+    "source": "/rss",
+    "destination": "http://feeds.dustyvcr.com/dustyvcr",
+    "type": 301
+  } ]
   }
 }
