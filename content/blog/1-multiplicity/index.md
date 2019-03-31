@@ -1,9 +1,8 @@
 ---
-layout: post
 title: "Episode 1: Multiplicity"
-categories:
-  - episodes
+date: "2019-03-06T00:00:00.000Z"
 ---
+
 In the premiere episode of *Dusty VCR*, Michael, Rachel, and Xena discuss the 1999 film, [Multiplicity](https://www.imdb.com/title/tt0117108/), starring Michael Keaton and Andie MacDowell.
 
 The Dusty VCR gang decides whether this film has held up, 20 years later, and what kind of personalities their own clones might have.

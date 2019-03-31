@@ -1,7 +1,8 @@
 ---
-layout: page
+path: "/about"
 title: About
-permalink: /about/
+date: "2019-03-05T00:00:00.000Z"
+description: "Dusty VCR is a podcast about the movies we grew up with."
 ---
 
 Dusty VCR is a podcast about the movies we grew up with. It's hosted by Michael Lynch, Rachel Lynch, and Xena Dreyfuss.
@@ -16,7 +17,7 @@ Dusty VCR is available wherever you get your podcasts:
 
 Or, just enter our RSS feed:
 
-* [https://dustyvcr.com/rss](https://dustyvcr.com/rss)
+* [http://feeds.dustyvcr.com/dustyvcr](http://feeds.dustyvcr.com/dustyvcr)
 
 ## Contact
 

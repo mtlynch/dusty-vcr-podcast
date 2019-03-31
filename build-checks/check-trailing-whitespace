@@ -13,8 +13,7 @@ if egrep \
   --line-number \
   --binary-files=without-match \
   --dereference-recursive \
-  --exclude-dir={.git,_site,_vendor} \
-  --exclude=rss \
+  --exclude-dir={.git,node_modules,public} \
   ./ ; then
   echo "ERROR: Found trailing whitespace";
   exit 1;

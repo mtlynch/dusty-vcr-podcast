@@ -1,57 +1,31 @@
-defaults: &defaults
-  working_directory: ~/repo
 version: 2.1
 jobs:
   check-whitespace:
-    <<: *defaults
     docker:
-      - image: circleci/ruby:2.4.4
+      - image: circleci/node:8.12
     steps:
       - checkout
       - run:
           name: Check for trailing whitespace
-          command: _tests/check-trailing-whitespace
+          command: build-checks/check-trailing-whitespace
   build:
-    <<: *defaults
     docker:
-      - image: circleci/ruby:2.4.4
-    environment:
-      # Keep in sync with save_cache path.
-      BUNDLE_PATH: ~/repo/_vendor/bundle
+      - image: mtlynch/gatsby:2.5.4-node10
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - rubygems-{{ .Environment.CIRCLE_CACHE_VERSION }}-{{ checksum "Gemfile.lock" }}
-            - rubygems-{{ .Environment.CIRCLE_CACHE_VERSION }}
       - run:
-          name: Configure Bundler
-          command: |
-            echo 'export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")' >> $BASH_ENV
-            source $BASH_ENV
-            gem install bundler
+          name: Download npm packages
+          command: npm install
       - run:
-          name: Bundle Install
-          command: bundle check || bundle install
-      - run:
-          name: Lint Markdown
-          command: _tests/lint-markdown
-      - save_cache:
-          key: rubygems-{{ .Environment.CIRCLE_CACHE_VERSION }}-{{ checksum "Gemfile.lock" }}
-          paths:
-            # Keep in sync with BUNDLE_PATH.
-            - ~/repo/_vendor/bundle
-      - run:
-          name: Jekyll build
-          command: bundle exec jekyll build
+          name: Gatsby build
+          command: gatsby build
       - persist_to_workspace:
           root: ./
           paths:
-            - _site
+            - public
             - firebase.json
             - .firebaserc
   deploy:
-    <<: *defaults
     docker:
       - image: circleci/node:8.12
     steps:

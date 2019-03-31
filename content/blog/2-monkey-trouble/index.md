@@ -1,8 +1,6 @@
 ---
-layout: post
 title: "Episode 2: Monkey Trouble"
-categories:
-  - episodes
+date: "2019-03-13T00:00:00.000Z"
 ---
 
 In the historic second episode of *Dusty VCR*, we re-watch the 1994 marsupial classic, [*Monkey Trouble*](https://www.imdb.com/title/tt0110557/), starring Thora Birch and Harvey Keitel.
