@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   check-whitespace:
     docker:
-      - image: circleci/node:8.12
+      - image: circleci/node:9.11.2-stretch
     steps:
       - checkout
       - run:
@@ -27,7 +27,7 @@ jobs:
             - .firebaserc
   deploy:
     docker:
-      - image: circleci/node:8.12
+      - image: circleci/node:9.11.2-stretch
     steps:
       - attach_workspace:
           at: ./
