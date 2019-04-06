@@ -1,6 +1,6 @@
 ---
 title: "Episode 3: Splash"
-date: "2019-04-06T015:58:00.000Z"
+date: "2019-04-06T15:58:00.000Z"
 ---
 
 The Dusty VCR gang watches the 1984 film, [*Splash*](https://www.imdb.com/title/tt0088161/), starring Tom Hanks, John Candy, and Daryl Hannah.
