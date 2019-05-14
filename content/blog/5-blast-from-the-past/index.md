@@ -1,5 +1,5 @@
 ---
-title: "Episode 5: My Blast from the Past"
+title: "Episode 5: Blast from the Past"
 date: "2019-05-13T19:45:00.000Z"
 ---
 
