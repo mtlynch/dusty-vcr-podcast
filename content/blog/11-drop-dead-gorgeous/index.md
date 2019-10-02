@@ -1,5 +1,5 @@
 ---
-title: "Episode 11: Drop Dead Gorgeous"
+title: "Episode 11: Drop Dead Gorgeous (w/ Penina Beede)"
 date: "2019-09-18T23:39:00.000Z"
 ---
 
