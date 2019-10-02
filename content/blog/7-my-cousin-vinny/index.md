@@ -1,5 +1,5 @@
 ---
-title: "Episode 7: My Cousin Vinny"
+title: "Episode 7: My Cousin Vinny (w/ Bob Lynch)"
 date: "2019-06-16T12:00:00.000Z"
 ---
 In a special Father's Day episode of *Dusty VCR*, we're joined by Bob Lynch, dad to many of the *Dusty VCR* hosts. And we're talking about one of his favorite movies: the 1992 comedy [*My Cousin Vinny*](https://www.imdb.com/title/tt0104952/), starring Joe Pesci and Marisa Tomei.

@@ -1,5 +1,5 @@
 ---
-title: "Episode 10: The Wedding Singer"
+title: "Episode 10: The Wedding Singer (w/ Matt Kantrowitz)"
 date: "2019-08-28T23:39:00.000Z"
 ---
 Matt Kantrowitz, one of Michael's oldest friends and comedy partners, joins us to discuss the 1998 classic, [*The Wedding Singer*](https://www.imdb.com/title/tt0120888/), starring Adam Sandler and Drew Barrymore.

@@ -1,5 +1,5 @@
 ---
-title: "Episode 9: The Addams Family"
+title: "Episode 9: The Addams Family (w/ Chris Lund)"
 date: "2019-07-28T23:39:00.000Z"
 ---
 Our friend Chris Lund joins us to discuss the 1991 comedy, [*The Addams Family*](https://www.imdb.com/title/tt0101272/), staring Raul Julia, Anjelica Huston, and Christina Ricci.
