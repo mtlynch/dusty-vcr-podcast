@@ -7,4 +7,4 @@ In the premiere episode of *Dusty VCR*, Michael, Rachel, and Xena discuss the 19
 
 The Dusty VCR gang decides whether this film has held up, 20 years later, and what kind of personalities their own clones might have.
 
-<iframe style="border: none" src="//html5-player.libsyn.com/embed/episode/id/8908049/height/360/theme/standard/thumbnail/yes/direction/backward/" height="360" width="100%" scrolling="no"  allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+<iframe src="https://anchor.fm/dustyvcr/embed/episodes/1-Multiplicity-e7sorl" height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
