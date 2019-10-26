@@ -1,0 +1,47 @@
+baseURL = "http://dustyvcr.com/"
+languageCode = "en-us"
+title = "Dusty VCR"
+theme = "minimal"
+disqusShortname = "" # delete this to disable disqus comments
+googleAnalytics = ""
+
+[params]
+    author = "Dusty VCR"
+    description = "A podcast about the movies we grew up with. Hosted by Michael Lynch, Rachel Lynch, and Xena Dreyfuss."
+    githubUsername = ""
+    accent = "red"
+    showBorder = true
+    backgroundColor = "white"
+    font = "Raleway" # should match the name on Google Fonts!
+    highlight = true
+    highlightStyle = "default"
+    highlightLanguages = ["go", "haskell", "kotlin", "scala", "swift"]
+
+[[menu.main]]
+    url = "/"
+    name = "Home"
+    weight = 1
+
+[[menu.main]]
+    url = "/about/"
+    name = "About"
+    weight = 2
+
+[[menu.main]]
+    url = "/post/"
+    name = "Episodes"
+    weight = 3
+
+# Social icons to be shown on the right-hand side of the navigation bar.
+# The "name" field should match the name of the icon in Font Awesome.
+# The list of available icons can be found at http://fontawesome.io/icons.
+
+[[menu.icon]]
+    url = "mailto:contact@dustyvcr.com"
+    name = "envelope-o"
+    weight = 1
+
+[[menu.icon]]
+    url = "https://twitter.com/thedustyvcr/"
+    name = "twitter"
+    weight = 2

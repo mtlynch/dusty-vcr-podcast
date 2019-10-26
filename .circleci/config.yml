@@ -10,15 +10,12 @@ jobs:
           command: build-checks/check-trailing-whitespace
   build:
     docker:
-      - image: mtlynch/gatsby:2.5.4-node10
+      - image: jojomi/hugo:0.58.3
     steps:
       - checkout
       - run:
-          name: Download npm packages
-          command: npm install
-      - run:
-          name: Gatsby build
-          command: gatsby build
+          name: Build public site
+          command: hugo
       - persist_to_workspace:
           root: ./
           paths:

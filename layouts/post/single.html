@@ -1,0 +1,24 @@
+{{ partial "header" . }}
+
+<main>
+
+    <div>
+        <h1>{{ .Title }}</h1>
+        <h5>{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") }}</h5>
+        {{ partial "tags" . }}
+    </div>
+
+    <div align="start" class="content">{{ .Content }}</div>
+
+    <iframe src="{{ .Params.Embed_url }}" height="102px" width="100%" frameborder="0" scrolling="no"></iframe>
+
+    <!-- Related posts -->
+    {{ $related := first 3 (where (where (where .Site.Pages.ByDate.Reverse ".Type" "==" "post") ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
+    {{ if $related }}
+        <h4 class="page-header">Related</h4>
+        {{ range $related }} {{ partial "list-item" . }} {{ end }}
+    {{ end }}
+
+</main>
+
+{{ partial "footer" . }}
