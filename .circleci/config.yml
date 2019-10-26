@@ -14,9 +14,6 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Download npm packages
-          command: npm install
-      - run:
           name: Build public site
           command: hugo
       - persist_to_workspace:
