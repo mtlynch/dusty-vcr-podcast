@@ -1,4 +1,4 @@
-baseURL = "http://dustyvcr.com/"
+baseURL = "https://dustyvcr.com/"
 languageCode = "en-us"
 title = "Dusty VCR"
 theme = "minimal"
