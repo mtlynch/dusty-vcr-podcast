@@ -6,6 +6,9 @@ disqusShortname = "" # delete this to disable disqus comments
 googleAnalytics = ""
 ignoreFiles = [ "serve" ]
 
+[permalinks]
+    post = "/:filename/"
+
 [params]
     author = "Dusty VCR"
     description = "A podcast about the movies we grew up with. Hosted by Michael Lynch, Rachel Lynch, and Xena Dreyfuss."
