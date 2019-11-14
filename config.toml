@@ -4,6 +4,7 @@ title = "Dusty VCR"
 theme = "minimal"
 disqusShortname = "" # delete this to disable disqus comments
 googleAnalytics = ""
+ignoreFiles = [ "serve" ]
 
 [params]
     author = "Dusty VCR"
