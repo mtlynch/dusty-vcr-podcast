@@ -2,6 +2,8 @@
 title: "Episode 13: While You Were Sleeping (w/ Matt Woodland)"
 date: "2019-11-14T00:00:00.000Z"
 embed_url: https://anchor.fm/dustyvcr/embed/episodes/13--While-You-Were-Sleeping-w-Matt-Woodland-e90b9u
+images:
+  - /13-while-you-were-sleeping/cover.jpg
 ---
 
 Comedian and fan-favorite [Matt Woodland](https://www.instagram.com/matt.woodland/) makes his triumphant return to Dusty VCR to discuss his favorite genre: rom-coms.
