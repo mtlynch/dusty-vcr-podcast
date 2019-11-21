@@ -20,6 +20,7 @@ ignoreFiles = [ "serve" ]
     highlight = true
     highlightStyle = "default"
     highlightLanguages = ["go", "haskell", "kotlin", "scala", "swift"]
+    css = ["css/dusty.css"]
 
 [[menu.main]]
     url = "/"
