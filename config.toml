@@ -20,7 +20,6 @@ ignoreFiles = [ "serve" ]
     highlight = false
     highlightStyle = "default"
     highlightLanguages = []
-    mathJax = false
     css = ["css/dusty.css"]
 
 [[menu.main]]
