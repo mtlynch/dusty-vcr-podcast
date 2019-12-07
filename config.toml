@@ -33,13 +33,13 @@ unsafe= true
     weight = 1
 
 [[menu.main]]
-    url = "/about/"
-    name = "About"
+    url = "/post/"
+    name = "Episodes"
     weight = 2
 
 [[menu.main]]
-    url = "/post/"
-    name = "Episodes"
+    url = "/about/"
+    name = "About"
     weight = 3
 
 # Social icons to be shown on the right-hand side of the navigation bar.
