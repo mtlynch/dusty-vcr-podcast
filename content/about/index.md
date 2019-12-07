@@ -10,9 +10,21 @@ Dusty VCR is a podcast about the movies we grew up with. It's hosted by Michael 
 
 Dusty VCR is available wherever you get your podcasts:
 
-* [iTunes](https://itunes.apple.com/us/podcast/dusty-vcr/id1455432897)
-* [Google Play Music](https://play.google.com/music/m/Ibumwzlyvjnz4e6su3qnhjamj6q?t=Dusty_VCR)
-* [Stitcher](https://www.stitcher.com/podcast/dusty-vcr)
+<style>
+.badges {
+  display: flex;
+}
+
+.badges img {
+  height: 60px;
+}
+</style>
+
+<div class="badges">
+
+[![Listen on Apple Podcasts](apple-badge.svg)](https://itunes.apple.com/us/podcast/dusty-vcr/id1455432897) [![Listen on Google Play Music](google-play-badge.png)](https://play.google.com/music/m/Ibumwzlyvjnz4e6su3qnhjamj6q?t=Dusty_VCR) [![Listen on Spotify](spotify-badge.svg)](https://open.spotify.com/show/6dLxmDZjUs0NEN1teb4SZs)
+
+</div>
 
 Or, just enter our RSS feed:
 

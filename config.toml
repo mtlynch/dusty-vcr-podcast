@@ -22,6 +22,10 @@ ignoreFiles = [ "serve" ]
     highlightLanguages = []
     css = ["css/dusty.css"]
 
+[markup.goldmark.renderer]
+# Allow Markdown to include embedded HTML.
+unsafe= true
+
 [[menu.main]]
     url = "/"
     name = "Home"
