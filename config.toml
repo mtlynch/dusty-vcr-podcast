@@ -21,6 +21,7 @@ ignoreFiles = [ "serve" ]
     highlightStyle = "default"
     highlightLanguages = []
     css = ["css/dusty.css"]
+    favicon = "favicon.ico"
 
 [markup.goldmark.renderer]
 # Allow Markdown to include embedded HTML.
