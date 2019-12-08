@@ -24,8 +24,8 @@ ignoreFiles = [ "serve" ]
     favicon = "favicon.ico"
 
 [markup.goldmark.renderer]
-# Allow Markdown to include embedded HTML.
-unsafe= true
+    # Allow Markdown to include embedded HTML.
+    unsafe= true
 
 [[menu.main]]
     url = "/"
