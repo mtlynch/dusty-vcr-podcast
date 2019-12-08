@@ -44,6 +44,7 @@ workflows:
       - deploy:
           requires:
             - build
+            - check-whitespace
           filters:
             branches:
               only: master
