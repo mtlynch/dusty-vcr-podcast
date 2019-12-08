@@ -10,7 +10,7 @@ jobs:
           command: build-checks/check-trailing-whitespace
   build:
     docker:
-      - image: jojomi/hugo:0.58.3
+      - image: jojomi/hugo:0.60.1
     steps:
       - checkout
       - run:
