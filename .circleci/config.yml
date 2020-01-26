@@ -14,6 +14,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: DEBUG
+          command: ls -l themes
+      - run:
           name: Get submodules
           command: |
             git submodule init
