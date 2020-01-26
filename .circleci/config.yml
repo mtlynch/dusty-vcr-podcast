@@ -15,7 +15,7 @@ jobs:
       - checkout
       - run:
           name: DEBUG
-          command: git log && ls -l themes && ls -l themes/minimal
+          command: git log | tee /dev/null && ls -l themes && ls -l themes/minimal
       - run:
           name: Get submodules
           command: |
