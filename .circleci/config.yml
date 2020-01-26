@@ -14,6 +14,14 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Get submodules
+          # Not sure why we have to rm -rf the themes, but build breaks
+          # otherwise...
+          command: |
+            rm -rf themes
+            git submodule init
+            git submodule update --remote
+      - run:
           name: Build public site
           command: hugo
       - persist_to_workspace:
