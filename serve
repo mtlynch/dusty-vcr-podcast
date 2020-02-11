@@ -1,1 +1,1 @@
-hugo server
+hugo server --bind dusty-hugo --baseURL http://dusty-hugo:1313
