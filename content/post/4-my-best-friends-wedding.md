@@ -6,3 +6,5 @@ embed_url: https://anchor.fm/dustyvcr/embed/episodes/4-My-Best-Friends-Wedding-w
 Dusty VCR has its first ever guest! Comedian [Matt Woodland](https://www.instagram.com/matt.woodland/) joins the team to revisit the 1997 classic [*My Best Friend's Wedding*](https://www.imdb.com/title/tt0119738/), starring Julia Roberts, Dermott Mulroney, and Cameron Diaz.
 
 We talk about how we use romantic comedies as a security blanket, the novelty of email technology, and we debut our newest feature: "Porn or Dirty Dancing?"
+
+<!--more-->

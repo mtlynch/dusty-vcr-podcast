@@ -7,3 +7,5 @@ embed_url: https://anchor.fm/dustyvcr/embed/episodes/11--Drop-Dead-Gorgeous-w-Pe
 [Penina Beede](https://twitter.com/realpenina), comedian and host of the upcoming podcast 25 for 25, joins us to discuss the 1999 film [*Drop Dead Gorgeous*](https://www.imdb.com/title/tt0157503/), starring Kirsten Dunst, Denise Richards, and Kirstie Alley.
 
 We discuss making funerals funny, meeting Brittany Murphy, and bring new meaning to the word "riveting."
+
+<!--more-->

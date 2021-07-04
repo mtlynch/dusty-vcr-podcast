@@ -5,9 +5,10 @@ embed_url: https://anchor.fm/dustyvcr/embed/episodes/13--While-You-Were-Sleeping
 images:
   - /13-while-you-were-sleeping/cover.jpg
 ---
-
 Comedian and fan-favorite [Matt Woodland](https://www.instagram.com/matt.woodland/) makes his triumphant return to Dusty VCR to discuss his favorite genre: rom-coms.
 
 We re-watch the 1995 classic [*While You Were Sleeping*](https://www.imdb.com/title/tt0114924/) with Sandy B and Billy P. We talk about over-the-top romantic gestures, dating culture in the 1920s when Matt was growing up, and we reverse-engineer our parents' present motivations at Christmas.
+
+<!--more-->
 
 Finally, we play a rousing and high-scoring edition of The Mom Game!

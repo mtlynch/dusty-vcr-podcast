@@ -4,7 +4,7 @@ date: "2019-03-05T00:00:00.000Z"
 description: "Dusty VCR is a podcast about the movies we grew up with."
 ---
 
-Dusty VCR is a podcast about the movies we grew up with. It's hosted by Michael Lynch, Rachel Lynch, and Xena Dreyfuss.
+Dusty VCR is a podcast about the movies we grew up with. It's hosted by the brother and sister team of Michael and Rachel Lynch.
 
 ## Subscribe
 
