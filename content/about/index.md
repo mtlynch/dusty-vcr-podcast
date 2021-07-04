@@ -22,7 +22,8 @@ Dusty VCR is available wherever you get your podcasts:
 
 <div class="badges">
 
-[![Listen on Apple Podcasts](apple-badge.svg)](https://itunes.apple.com/us/podcast/dusty-vcr/id1455432897) [![Listen on Google Play Music](google-play-badge.png)](https://play.google.com/music/m/Ibumwzlyvjnz4e6su3qnhjamj6q?t=Dusty_VCR) [![Listen on Spotify](spotify-badge.svg)](https://open.spotify.com/show/6dLxmDZjUs0NEN1teb4SZs)
+[![Listen on Apple Podcasts](apple-badge.svg)](https://itunes.apple.com/us/podcast/dusty-vcr/id1455432897)
+[![Listen on Spotify](spotify-badge.svg)](https://open.spotify.com/show/6dLxmDZjUs0NEN1teb4SZs)
 
 </div>
 
