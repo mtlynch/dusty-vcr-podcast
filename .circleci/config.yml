@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   check-whitespace:
     docker:
-      - image: circleci/node:13.1.0-stretch
+      - image: cimg/base:2021.04
     steps:
       - checkout
       - run:
@@ -10,7 +10,7 @@ jobs:
           command: build-checks/check-trailing-whitespace
   build:
     docker:
-      - image: jojomi/hugo:0.60.1
+      - image: peaceiris/hugo:v0.84.4
     steps:
       - checkout
       - run:
@@ -29,7 +29,7 @@ jobs:
             - .firebaserc
   deploy:
     docker:
-      - image: circleci/node:13.1.0-stretch
+      - image: cimg/base:2021.04
     steps:
       - attach_workspace:
           at: ./
