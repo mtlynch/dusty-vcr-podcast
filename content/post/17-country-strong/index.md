@@ -9,4 +9,6 @@ Comedian and Dusty VCR favorite [Tricia D'Onofrio](https://wanderjest.com/tricia
 
 We discuss secret country music fandom, regrettable piercings, and debate whether Garrett Hedlund is hot.
 
+<!--more-->
+
 This episode features a special appearance by Gabe Miner, who returns to the pod to deliver another exciting edition of The Polish Game.

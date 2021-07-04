@@ -6,3 +6,5 @@ embed_url: https://anchor.fm/dustyvcr/embed/episodes/10--The-Wedding-Singer-w-Ma
 Matt Kantrowitz, one of Michael's oldest friends and comedy partners, joins us to discuss the 1998 classic, [*The Wedding Singer*](https://www.imdb.com/title/tt0120888/), starring Adam Sandler and Drew Barrymore.
 
 We discuss the undercelebrated brilliance of Jon Lovitz, Home Depot Hotties, and play "Porn or *The Godfather*."
+
+<!--more-->

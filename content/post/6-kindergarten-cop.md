@@ -6,3 +6,5 @@ embed_url: https://anchor.fm/dustyvcr/embed/episodes/6-Kindergarten-Cop-w-Kathy-
 Comedian and writer Kathy Lynch joins Dusty VCR to re-watch the ever-quotable 1990 classic *Kindergarten Cop*, starring Arnold Schwarzenegger, Pamela Reed, and Penelope Ann Miller.
 
 In this episode, we reflect on some of the finest child acting in any 90s movie, showcase our pitch-perfect Arnold Schwarzenegger impressions, and we reveal secret crushes from our adolescence.
+
+<!--more-->

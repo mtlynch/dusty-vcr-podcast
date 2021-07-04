@@ -8,3 +8,5 @@ images:
 Comedian and writer [Sean Noah Noah](https://twitter.com/seannoahnoah) joins us to discuss the 1999 sci-fi satire, [*Galaxy Quest*](https://www.imdb.com/title/tt0177789/), starring Tim Allen, Sigourney Weaver, Alan Rickman, and Tony Shalhoub.
 
 We talk about the true meaning of "trajesty," we try to figure out what makes Thermians so incredibly endearing, and we play the first ever edition of The Polish Game, featuring Gabe Miner.
+
+<!--more-->

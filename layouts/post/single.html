@@ -1,10 +1,15 @@
 {{ partial "header" . }}
 
+{{ with .Params.images }} {{ $.Scratch.Set "image" (index . 0) }} {{ end }}
+
 <main>
 
     <div>
         <h1>{{ .Title }}</h1>
-        <h5>{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") }}</h5>
+
+        <p class="date">{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") }}</p>
+
+        <img src="{{ .Scratch.Get "image" }}">
         {{ partial "tags" . }}
     </div>
 
