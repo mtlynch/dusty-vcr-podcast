@@ -29,7 +29,7 @@
     "type": 301
   } ],
   "rewrites": [ {
-    "source": "/rsstest",
+    "source": "/dustyvcr",
     "function": "ProxyRequest"
   } ]
   }
