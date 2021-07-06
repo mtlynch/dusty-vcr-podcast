@@ -27,6 +27,10 @@
     "source": "/rss",
     "destination": "http://feeds.dustyvcr.com/dustyvcr",
     "type": 301
+  } ],
+  "rewrites": [ {
+    "source": "/rsstest",
+    "function": "ProxyRequest"
   } ]
   }
 }
