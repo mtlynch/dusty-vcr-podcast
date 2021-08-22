@@ -10,3 +10,5 @@ Fan favorite [Tricia D'Onofrio](https://instagram.com/keylimepie4) returns to th
 We talk about 90s deepfake technology, romcom tropes, and how Tricia became one of the cool kids at circus camp.
 
 <!--more-->
+
+*Editing help from [Jason Sissoyev](https://jasonsissoyev.com)*
