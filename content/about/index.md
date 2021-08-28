@@ -13,10 +13,30 @@ Dusty VCR is available wherever you get your podcasts:
 <style>
 .badges {
   display: flex;
+  flex-direction: column;
+  margin: 3rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  .badges {
+    flex-direction: row;
+  }
+}
+
+.badges p {
+  text-align: center;
+  margin: 0;
 }
 
 .badges img {
-  height: 60px;
+    width: 200px;
+    margin: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .badges img {
+    height: 50px;
+  }
 }
 </style>
 
@@ -24,6 +44,7 @@ Dusty VCR is available wherever you get your podcasts:
 
 [![Listen on Apple Podcasts](apple-badge.svg)](https://itunes.apple.com/us/podcast/dusty-vcr/id1455432897)
 [![Listen on Spotify](spotify-badge.svg)](https://open.spotify.com/show/6dLxmDZjUs0NEN1teb4SZs)
+[![Listen on Amazon Music](amazon-badge.png)](https://music.amazon.com/podcasts/f795531d-fa4a-4397-a8a4-28cf435e17ac)
 
 </div>
 
