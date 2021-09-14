@@ -11,4 +11,4 @@ We talk about 90s deepfake technology, romcom tropes, and how Tricia became one 
 
 <!--more-->
 
-*Editing help from [Jason Sissoyev](https://jasonsissoyev.com)*
+*Editing help from Jason Sissoyev*
