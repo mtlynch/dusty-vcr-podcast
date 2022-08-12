@@ -1,13 +1,10 @@
 <div class="item">
+  {{ $link := .RelPermalink }} {{ with .Params.link }} {{ $link := . }} {{ end
+  }} {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") |
+  $.Scratch.Set "subheader" }}
 
-    {{ $link := .RelPermalink }}
-    {{ with .Params.link }} {{ $link := . }} {{ end }}
-
-    {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") | $.Scratch.Set "subheader" }}
-
-    <h2><a href="{{ $link }}">{{ .Title }}</a></h2>
-    {{ with .Params.images }}<a href="{{ $link }}"><img src="{{ index . 0 }}"></a>{{ end }}
-
-    {{ .Summary }}
-
+  <h2><a href="{{ $link }}">{{ .Title }}</a></h2>
+  {{ with .Params.images }}<a href="{{ $link }}"
+    ><img src="{{ index . 0 }}" /></a
+  >{{ end }} {{ .Summary }}
 </div>

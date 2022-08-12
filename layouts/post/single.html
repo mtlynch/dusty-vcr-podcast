@@ -1,29 +1,33 @@
-{{ partial "header" . }}
-
-{{ with .Params.images }} {{ $.Scratch.Set "image" (index . 0) }} {{ end }}
+{{ partial "header" . }} {{ with .Params.images }} {{ $.Scratch.Set "image"
+(index . 0) }} {{ end }}
 
 <main>
+  <div>
+    <h1>{{ .Title }}</h1>
 
-    <div>
-        <h1>{{ .Title }}</h1>
+    <p class="date">
+      {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") }}
+    </p>
 
-        <p class="date">{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") }}</p>
+    <img src="{{ .Scratch.Get "image" }}"> {{ partial "tags" . }}
+  </div>
 
-        <img src="{{ .Scratch.Get "image" }}">
-        {{ partial "tags" . }}
-    </div>
+  <div align="start" class="content">{{ .Content }}</div>
 
-    <div align="start" class="content">{{ .Content }}</div>
+  <iframe
+    src="{{ .Params.Embed_url }}"
+    height="102px"
+    width="100%"
+    frameborder="0"
+    scrolling="no"
+  ></iframe>
 
-    <iframe src="{{ .Params.Embed_url }}" height="102px" width="100%" frameborder="0" scrolling="no"></iframe>
-
-    <!-- Related posts -->
-    {{ $related := first 3 (where (where (where .Site.Pages.ByDate.Reverse ".Type" "==" "post") ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
-    {{ if $related }}
-        <h4 class="page-header">Related</h4>
-        {{ range $related }} {{ partial "list-item" . }} {{ end }}
-    {{ end }}
-
+  <!-- Related posts -->
+  {{ $related := first 3 (where (where (where .Site.Pages.ByDate.Reverse ".Type"
+  "==" "post") ".Params.tags" "intersect" .Params.tags) "Permalink" "!="
+  .Permalink) }} {{ if $related }}
+  <h4 class="page-header">Related</h4>
+  {{ range $related }} {{ partial "list-item" . }} {{ end }} {{ end }}
 </main>
 
 {{ partial "footer" . }}
