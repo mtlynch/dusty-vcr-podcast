@@ -1,10 +1,10 @@
 {{ partial "header" . }}
 
+
 <main>
+  <h1>Episodes</h1>
 
-    <h1>Episodes</h1>
-
-    {{ range (.Paginator 15).Pages }} {{ partial "list-item" . }} {{ end }}
+  {{ range (.Paginator 15).Pages }}{{ partial "list-item" . }}{{ end }}
 
 </main>
 
