@@ -4,7 +4,7 @@ date: "2019-03-05T00:00:00.000Z"
 description: "Dusty VCR is a podcast about the movies we grew up with."
 ---
 
-Dusty VCR is a podcast about the movies we grew up with. It's hosted by the brother and sister team of Michael and Rachel Lynch.
+Dusty VCR is a podcast about the movies we grew up with. It's hosted by the brother and sister team of Michael and Rachel Lynch and their dear friend Matt Woodland.
 
 ## Subscribe
 
