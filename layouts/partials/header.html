@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
   <head>
-    {{ partial "head-open" . }}
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{{ .Title }}</title>
@@ -44,12 +43,9 @@
         gtag('config', '{{ .Site.GoogleAnalytics }}');
       </script>
     {{ end }}
-
-    {{ partial "head-close" . }}
   </head>
 
   <body>
-    {{ partial "body-open" . }}
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
