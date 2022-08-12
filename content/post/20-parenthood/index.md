@@ -5,6 +5,7 @@ embed_url: https://anchor.fm/dustyvcr/embed/episodes/20--Parenthood-w-Michelle-T
 images:
   - /20-parenthood/cover.jpg
 ---
+
 Comedian and podcast neighbor [Michelle Talarico](https://wanderjest.com/performer/michelle.talarico) (aka "Michy Badcakes") joins us to talk about 1989's Parenthood, starring Steve Martin, Mary Steenburgen, Dianne Wiest, and a young Joaquin Phoenix.
 
 We talk about learning where babies come from (accurately or inaccurately). We argue passionately about immersion blenders vs. The Magic Bullet. Finally, Michelle explains why everyone in Auburn, MA is grizzled and shares what it's like when your mom discovers explicit details about your sex life.

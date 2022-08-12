@@ -5,7 +5,8 @@ embed_url: https://anchor.fm/dustyvcr/embed/episodes/17--Country-Strong-w-Tricia
 images:
   - /17-country-strong/cover.jpg
 ---
-Comedian and Dusty VCR favorite [Tricia D'Onofrio](https://wanderjest.com/tricia.donofrio) returns to the podcast to discuss the 2010 film [*Country Strong*](https://www.imdb.com/title/tt1555064/) starring Gwenyth Paltrow, Tim McGraw, Leighton Meester, and Garrett Hedlund.
+
+Comedian and Dusty VCR favorite [Tricia D'Onofrio](https://wanderjest.com/tricia.donofrio) returns to the podcast to discuss the 2010 film [_Country Strong_](https://www.imdb.com/title/tt1555064/) starring Gwenyth Paltrow, Tim McGraw, Leighton Meester, and Garrett Hedlund.
 
 We discuss secret country music fandom, regrettable piercings, and debate whether Garrett Hedlund is hot.
 
