@@ -1,8 +1,6 @@
 baseURL = "https://dustyvcr.com/"
 languageCode = "en-us"
 title = "Dusty VCR"
-theme = "minimal"
-disqusShortname = "" # delete this to disable disqus comments
 googleAnalytics = "UA-78473158-2"
 ignoreFiles = [ "serve" ]
 
