@@ -1,13 +1,9 @@
-{{ partial "header" . }}
+{{ define "content" }}
 
-
-<main>
   <div>
     <h1>{{ .Title }}</h1>
     {{ partial "tags" . }}
   </div>
 
   <div align="start" class="content">{{ .Content }}</div>
-</main>
-
-{{ partial "footer" . }}
+{{ end }}

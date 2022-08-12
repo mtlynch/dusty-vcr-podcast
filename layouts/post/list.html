@@ -1,12 +1,6 @@
-{{ partial "header" . }}
-
-
-<main>
+{{ define "content" }}
   <h1>Episodes</h1>
 
   {{ range (.Paginator 15).Pages }}{{ partial "list-item" . }}{{ end }}
 
-</main>
-
-{{ partial "paginator" . }}
-{{ partial "footer" . }}
+{{ end }}

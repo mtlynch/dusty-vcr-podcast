@@ -1,9 +1,8 @@
-{{ partial "header" . }}
+{{ define "content" }}
 
-{{ with .Params.images }}{{ $.Scratch.Set "image" (index . 0) }}{{ end }}
+  {{ with .Params.images }}{{ $.Scratch.Set "image" (index . 0) }}{{ end }}
 
 
-<main>
   <div>
     <h1>{{ .Title }}</h1>
 
@@ -31,7 +30,4 @@
     <h4 class="page-header">Related</h4>
     {{ range $related }}{{ partial "list-item" . }}{{ end }}
   {{ end }}
-
-</main>
-
-{{ partial "footer" . }}
+{{ end }}

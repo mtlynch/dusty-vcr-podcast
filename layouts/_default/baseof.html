@@ -80,5 +80,15 @@
         </div>
       </div>
     </nav>
+
+    <main>
+      {{ block "content" . }}{{ end }}
+    </main>
+
+    <footer>
+      <p class="copyright text-muted">
+        {{ .Site.Params.copyright | default "&copy; All rights reserved. Powered by [Hugo](https://gohugo.io)." | markdownify }}
+      </p>
+    </footer>
   </body>
 </html>
