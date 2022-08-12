@@ -50,7 +50,7 @@ Dusty VCR is available wherever you get your podcasts:
 
 Or, just enter our RSS feed:
 
-* [https://feeds.dustyvcr.com/dustyvcr](https://feeds.dustyvcr.com/dustyvcr)
+- [https://feeds.dustyvcr.com/dustyvcr](https://feeds.dustyvcr.com/dustyvcr)
 
 ## Contact
 
