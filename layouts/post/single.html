@@ -1,9 +1,7 @@
-{{ partial "header" . }}
+{{ define "content" }}
+  {{ with .Params.images }}{{ $.Scratch.Set "image" (index . 0) }}{{ end }}
 
-{{ with .Params.images }}{{ $.Scratch.Set "image" (index . 0) }}{{ end }}
 
-
-<main>
   <div>
     <h1>{{ .Title }}</h1>
 
@@ -24,14 +22,4 @@
     frameborder="0"
     scrolling="no"
   ></iframe>
-
-  <!-- Related posts -->
-  {{ $related := first 3 (where (where (where .Site.Pages.ByDate.Reverse ".Type" "==" "post") ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
-  {{ if $related }}
-    <h4 class="page-header">Related</h4>
-    {{ range $related }}{{ partial "list-item" . }}{{ end }}
-  {{ end }}
-
-</main>
-
-{{ partial "footer" . }}
+{{ end }}
