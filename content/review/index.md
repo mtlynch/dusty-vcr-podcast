@@ -3,8 +3,9 @@ title: Review Us
 date: "2019-11-20T00:00:00.000Z"
 description: "Leave us a review on iTunes."
 aliases:
-    - /rate
+  - /rate
 ---
+
 Like Dusty VCR? Let the world know!
 
 Ratings on iTunes help new people discover the show. It's easy to do, and it makes us seem popular.
