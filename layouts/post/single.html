@@ -1,5 +1,7 @@
-{{ partial "header" . }} {{ with .Params.images }} {{ $.Scratch.Set "image"
-(index . 0) }} {{ end }}
+{{ partial "header" . }}
+
+{{ with .Params.images }}{{ $.Scratch.Set "image" (index . 0) }}{{ end }}
+
 
 <main>
   <div>
@@ -9,7 +11,8 @@
       {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") }}
     </p>
 
-    <img src="{{ .Scratch.Get "image" }}"> {{ partial "tags" . }}
+    <img src="{{ .Scratch.Get "image" }}" />
+    {{ partial "tags" . }}
   </div>
 
   <div align="start" class="content">{{ .Content }}</div>
@@ -23,11 +26,12 @@
   ></iframe>
 
   <!-- Related posts -->
-  {{ $related := first 3 (where (where (where .Site.Pages.ByDate.Reverse ".Type"
-  "==" "post") ".Params.tags" "intersect" .Params.tags) "Permalink" "!="
-  .Permalink) }} {{ if $related }}
-  <h4 class="page-header">Related</h4>
-  {{ range $related }} {{ partial "list-item" . }} {{ end }} {{ end }}
+  {{ $related := first 3 (where (where (where .Site.Pages.ByDate.Reverse ".Type" "==" "post") ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
+  {{ if $related }}
+    <h4 class="page-header">Related</h4>
+    {{ range $related }}{{ partial "list-item" . }}{{ end }}
+  {{ end }}
+
 </main>
 
 {{ partial "footer" . }}
