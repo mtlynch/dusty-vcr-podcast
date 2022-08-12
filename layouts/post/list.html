@@ -3,4 +3,6 @@
 
   {{ range (.Paginator 15).Pages }}{{ partial "list-item" . }}{{ end }}
 
+  {{ partial "paginator" . }}
+
 {{ end }}
