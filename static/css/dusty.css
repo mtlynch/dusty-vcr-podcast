@@ -43,14 +43,6 @@ img {
   padding-top: 20px;
 }
 
-/* Profile picture */
-
-.profile {
-  width: 10vh;
-  height: 10vh;
-  border-radius: 50%;
-}
-
 /* Colored links */
 
 a:link,
