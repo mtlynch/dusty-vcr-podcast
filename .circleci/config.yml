@@ -8,6 +8,17 @@ jobs:
       - run:
           name: Check for trailing whitespace
           command: build-checks/check-trailing-whitespace
+  check_html_format:
+    docker:
+      - image: cimg/node:14.18.1
+    steps:
+      - checkout
+      - run:
+          name: Download npm packages
+          command: npm install
+      - run:
+          name: Check formatting
+          command: npm run check-format
   build:
     docker:
       - image: peaceiris/hugo:v0.84.4
@@ -41,11 +52,13 @@ workflows:
   test-deploy:
     jobs:
       - check-whitespace
+      - check_html_format
       - build
       - deploy:
           requires:
             - build
             - check-whitespace
+            - check_html_format
           filters:
             branches:
               only: master
