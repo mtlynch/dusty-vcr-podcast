@@ -9,7 +9,7 @@ ignoreFiles = [ "serve" ]
 
 [params]
     author = "Dusty VCR"
-    description = "A podcast about the movies we grew up with. Hosted by siblings Michael and Rachel Lynch and their dear friend Matt Woodland."
+    description = "A podcast about the movies we grew up with."
     githubUsername = ""
     accent = "red"
     showBorder = true

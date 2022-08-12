@@ -24,17 +24,22 @@ img {
 /* Homepage */
 
 .intro {
-  transform: translateY(22vh);
+  transform: translateY(16vh);
 }
 
 .intro > h1 {
   color: #212121;
-  font-size: 12vh;
+  font-size: 10em;
 }
 
 .intro > h2 {
   color: #757575;
-  font-size: 3vmin;
+  font-size: 4em;
+}
+
+.intro p {
+  margin-top: 4rem;
+  font-size: 1.75em;
 }
 
 /* Page content */
