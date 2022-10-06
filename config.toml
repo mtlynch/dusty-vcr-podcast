@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "Dusty VCR"
 googleAnalytics = "UA-78473158-2"
 ignoreFiles = [ "serve" ]
+buildFuture = true
 
 [permalinks]
     post = "/:filename/"
