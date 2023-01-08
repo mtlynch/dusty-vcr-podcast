@@ -12,9 +12,8 @@ body {
 
 main {
   margin: auto;
-  padding: 25px;
+  padding: 1rem;
   flex: 1 0 auto;
-  max-width: 750px;
 }
 
 img {
@@ -24,21 +23,40 @@ img {
 /* Homepage */
 
 .intro {
-  transform: translateY(16vh);
+  margin-top: 18vh;
+}
+
+@media screen and (min-width: 768px) {
+  .intro {
+    margin-top: 25vh;
+    max-width: 800px;
+  }
 }
 
 .intro > h1 {
   color: #212121;
-  font-size: 10em;
+  font-size: 72pt;
+}
+
+@media screen and (min-width: 768px) {
+  .intro > h1 {
+    font-size: 102pt;
+  }
 }
 
 .intro > h2 {
   color: #757575;
-  font-size: 4em;
+  font-size: 22pt;
+}
+
+@media screen and (min-width: 768px) {
+  .intro > h2 {
+    font-size: 42pt;
+  }
 }
 
 .intro p {
-  margin-top: 4rem;
+  margin-top: 8rem;
   font-size: 1.75em;
 }
 
