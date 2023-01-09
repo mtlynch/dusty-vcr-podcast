@@ -21,7 +21,7 @@ jobs:
           command: npm run check-format
   build:
     docker:
-      - image: peaceiris/hugo:v0.101.0
+      - image: peaceiris/hugo:v0.109.0
     steps:
       - checkout
       - run:
