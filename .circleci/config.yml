@@ -40,13 +40,25 @@ jobs:
             - .firebaserc
   deploy:
     docker:
-      - image: mtlynch/firebase-tools:8.1.1-node-14.0.0
+      - image: cimg/node:14.18.1
+    environment:
+      NETLIFY_SITE_ID: c5ddb255-01d9-4742-81c7-44415b9b587e
+    resource_class: small
     steps:
       - attach_workspace:
           at: ./
       - run:
-          name: Deploy to firebase
-          command: firebase deploy --token="$FIREBASE_DEPLOY_TOKEN"
+          name: Install netlify CLI
+          command: npm install netlify-cli
+      - run:
+          name: Deploy to production
+          command: |
+            ./node_modules/.bin/netlify \
+              deploy \
+              --dir=public \
+              --auth "${NETLIFY_AUTH_TOKEN}" \
+              --site="${NETLIFY_SITE_ID}" \
+              --prod
 workflows:
   version: 2
   test-deploy:
