@@ -31,8 +31,7 @@ jobs:
           root: ./
           paths:
             - public
-            - firebase.json
-            - .firebaserc
+            - netlify.toml
   deploy:
     docker:
       - image: cimg/node:14.18.1
