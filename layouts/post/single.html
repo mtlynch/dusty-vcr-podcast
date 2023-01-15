@@ -2,24 +2,24 @@
   {{ with .Params.images }}{{ $.Scratch.Set "image" (index . 0) }}{{ end }}
 
 
-  <div>
-    <h1>{{ .Title }}</h1>
-
+  <h1>{{ .Title }}</h1>
+  <div class="episode-wrapper">
     <p class="date">
       {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") }}
     </p>
 
     <img src="{{ .Scratch.Get "image" }}" />
     {{ partial "tags" . }}
+
+
+    <div class="content">{{ .Content }}</div>
+
+    <iframe
+      src="{{ .Params.Embed_url }}"
+      height="102px"
+      width="100%"
+      frameborder="0"
+      scrolling="no"
+    ></iframe>
   </div>
-
-  <div align="start" class="content">{{ .Content }}</div>
-
-  <iframe
-    src="{{ .Params.Embed_url }}"
-    height="102px"
-    width="100%"
-    frameborder="0"
-    scrolling="no"
-  ></iframe>
 {{ end }}
