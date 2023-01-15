@@ -15,6 +15,7 @@ Dusty VCR is available wherever you get your podcasts:
   display: flex;
   flex-direction: column;
   margin: 3rem 0;
+  justify-content: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -26,6 +27,7 @@ Dusty VCR is available wherever you get your podcasts:
 .badges p {
   text-align: center;
   margin: 0;
+  max-width: 100vw;
 }
 
 .badges img {

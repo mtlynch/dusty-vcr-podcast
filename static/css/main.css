@@ -103,6 +103,12 @@ a:hover {
   padding: 10px 0;
 }
 
+@media screen and (min-width: 768px) {
+  .item {
+    max-width: 750px;
+  }
+}
+
 .item-tag {
   background-color: var(--accent);
 }
@@ -145,6 +151,7 @@ main h1 {
 
 .content p {
   margin-bottom: 25px;
+  max-width: 70ch;
 }
 
 .item img {
