@@ -1,0 +1,29 @@
+[[redirects]]
+  from = "/rss"
+  to = "http://feeds.dustyvcr.com/dustyvcr"
+  status = 301
+
+[[redirects]]
+  from = "/guest"
+  to = "https://docs.google.com/document/d/1iUqZKjqhtdWT0xHOhlGh84X7-A3s_FIbXD0DIHoH6tw/edit"
+  status = 302
+
+[[redirects]]
+  from = "/guest-guide"
+  to = "https://docs.google.com/document/d/1iUqZKjqhtdWT0xHOhlGh84X7-A3s_FIbXD0DIHoH6tw/edit"
+  status = 302
+
+[[redirects]]
+  from = "/list"
+  to = "https://docs.google.com/document/d/1-FrBSbp_zcF8kLvp8eHhAqktMGjApo9yEFMu33U4oqI/edit#"
+  status = 302
+
+[[redirects]]
+  from = "/movies"
+  to = "https://docs.google.com/document/d/1-FrBSbp_zcF8kLvp8eHhAqktMGjApo9yEFMu33U4oqI/edit#"
+  status = 302
+
+[[redirects]]
+  from = "/movie-list"
+  to = "https://docs.google.com/document/d/1-FrBSbp_zcF8kLvp8eHhAqktMGjApo9yEFMu33U4oqI/edit#"
+  status = 302
