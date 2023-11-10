@@ -10,7 +10,7 @@ jobs:
           command: build-checks/check-trailing-whitespace
   check_html_format:
     docker:
-      - image: cimg/node:14.19.3
+      - image: cimg/node:20.9.0
     steps:
       - checkout
       - run:
@@ -34,7 +34,7 @@ jobs:
             - netlify.toml
   deploy:
     docker:
-      - image: cimg/node:14.18.1
+      - image: cimg/node:20.9.0
     environment:
       NETLIFY_SITE_ID: c5ddb255-01d9-4742-81c7-44415b9b587e
     resource_class: small
