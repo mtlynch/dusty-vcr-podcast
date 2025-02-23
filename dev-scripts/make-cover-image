@@ -14,10 +14,10 @@ magick $INPUT \
 -stroke black \
 -strokewidth 3 \
 -gravity center \
--font TeXGyreHeros-Regular \
+-font Source-Sans-3-Bold \
 -pointsize 100 \
--annotate +0-300 "Episode ${EPISODE_NUMBER}" \
--font TeXGyreHeros-Italic \
+-annotate +0-305 "Episode ${EPISODE_NUMBER}" \
+-font Source-Sans-3-Bold-Italic \
 -pointsize 160 \
--annotate +0+220 "${MOVIE_TITLE}" \
+-annotate +0+260 "${MOVIE_TITLE}" \
 "${OUTPUT_FILE}"
