@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: Check for trailing whitespace
-          command: build-checks/check-trailing-whitespace
+          command: dev-scripts/check-trailing-whitespace
   check_html_format:
     docker:
       - image: cimg/node:20.9.0
