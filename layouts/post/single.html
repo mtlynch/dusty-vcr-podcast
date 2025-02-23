@@ -14,12 +14,28 @@
 
     <div class="content">{{ .Content }}</div>
 
-    <iframe
-      src="{{ .Params.Embed_url }}"
-      height="102px"
-      width="100%"
-      frameborder="0"
-      scrolling="no"
-    ></iframe>
+    {{ if .Params.libsyn_episode_id }}
+      <iframe
+        title="Embed Player"
+        style="border:none"
+        src="https://play.libsyn.com/embed/episode/id/{{ .Params.libsyn_episode_id }}/height/128/theme/modern/size/standard/thumbnail/yes/custom-color/9b07f9/time-start/00:00:00/playlist-height/200/direction/backward/hide-subscribe/yes/font-color/FFFFFF"
+        height="128"
+        width="100%"
+        scrolling="no"
+        allowfullscreen=""
+        webkitallowfullscreen="true"
+        mozallowfullscreen="true"
+        oallowfullscreen="true"
+        msallowfullscreen="true"
+      ></iframe>
+    {{ else }}
+      <iframe
+        src="{{ .Params.Embed_url }}"
+        height="102px"
+        width="100%"
+        frameborder="0"
+        scrolling="no"
+      ></iframe>
+    {{ end }}
   </div>
 {{ end }}

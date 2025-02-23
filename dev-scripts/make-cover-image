@@ -6,17 +6,18 @@ INPUT=$1
 EPISODE_NUMBER=$2
 MOVIE_TITLE=$3
 
-OUTPUT_FILE=./content/post/29-clean-slate/cover.webp
+# Find the episode directory and construct output path
+OUTPUT_FILE=$(ls -d "./content/post/${EPISODE_NUMBER}"*/cover.webp)
 
 magick $INPUT \
 -fill '#00FF00' \
 -stroke black \
 -strokewidth 3 \
 -gravity center \
--font TeXGyreHeros-Regular \
+-font Source-Sans-3-Bold \
 -pointsize 100 \
--annotate +0-300 "Episode ${EPISODE_NUMBER}" \
--font TeXGyreHeros-Italic \
+-annotate +0-305 "Episode ${EPISODE_NUMBER}" \
+-font Source-Sans-3-Bold-Italic \
 -pointsize 160 \
--annotate +0+220 "${MOVIE_TITLE}" \
+-annotate +0+260 "${MOVIE_TITLE}" \
 "${OUTPUT_FILE}"
