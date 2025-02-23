@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+set -eux
+
+INPUT=$1
+EPISODE_NUMBER=$2
+MOVIE_TITLE=$3
+
+OUTPUT_FILE=./content/post/29-clean-slate/cover.webp
+
+magick $INPUT \
+-fill '#00FF00' \
+-stroke black \
+-strokewidth 3 \
+-gravity center \
+-font TeXGyreHeros-Regular \
+-pointsize 100 \
+-annotate +0-300 "Episode ${EPISODE_NUMBER}" \
+-font TeXGyreHeros-Italic \
+-pointsize 160 \
+-annotate +0+220 "${MOVIE_TITLE}" \
+"${OUTPUT_FILE}"
