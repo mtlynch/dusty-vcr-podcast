@@ -6,7 +6,8 @@ INPUT=$1
 EPISODE_NUMBER=$2
 MOVIE_TITLE=$3
 
-OUTPUT_FILE=./content/post/29-clean-slate/cover.webp
+# Find the episode directory and construct output path
+OUTPUT_FILE=$(ls -d "./content/post/${EPISODE_NUMBER}"*/cover.webp)
 
 magick $INPUT \
 -fill '#00FF00' \
