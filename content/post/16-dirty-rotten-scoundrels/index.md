@@ -1,7 +1,7 @@
 ---
 title: "Episode 16: Dirty Rotten Scoundrels (w/ Penina Beede)"
 date: "2020-02-10T00:00:00.000Z"
-embed_url: https://anchor.fm/dustyvcr/embed/episodes/16--Dirty-Rotten-Scoundrels-w-Penina-Beede-eaor14
+libsyn_episode_id: 11390695
 images:
   - /16-dirty-rotten-scoundrels/cover.jpg
 ---

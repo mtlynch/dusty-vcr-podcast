@@ -1,7 +1,7 @@
 ---
 title: "Episode 22: Notting Hill (w/ Sue Lynch and Matt Woodland)"
 date: "2022-05-08T00:00:00.000Z"
-embed_url: https://anchor.fm/dustyvcr/embed/episodes/22--Notting-Hill-w-Sue-Lynch-and-Matt-Woodland-e1ht79s
+libsyn_episode_id: 11390665
 images:
   - /22-notting-hill/cover.jpg
 ---

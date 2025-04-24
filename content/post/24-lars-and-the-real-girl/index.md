@@ -1,9 +1,9 @@
 ---
 title: "Episode 24: Lars and the Real Girl (w/ Xena Dreyfuss)"
 date: 2022-10-07T00:00:00-04:00
+libsyn_episode_id: 11390655
 images:
   - /24-lars-and-the-real-girl/cover.jpg
-embed_url: https://anchor.fm/dustyvcr/embed/episodes/24--Lars-and-the-Real-Girl-w-Xena-Dreyfuss-e1orstr/a-a8l1q6q
 ---
 
 Xena Dreyfuss makes their triumphant return to the podcast in honor of Rachel's birthday. We discuss Rachel's all-time favorite movie, [_Lars and the Real Girl_](https://www.imdb.com/title/tt0805564/), starring Ryan Gosling, Emily Mortimer, and Patricia Clarkson.

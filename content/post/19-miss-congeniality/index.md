@@ -1,7 +1,7 @@
 ---
 title: "Episode 19: Miss Congeniality (w/ Tricia D'Onofrio)"
 date: "2021-08-17T00:00:00.000Z"
-embed_url: https://anchor.fm/dustyvcr/embed/episodes/Miss-Congeniality-w-Tricia-DOnofrio-e162rgg
+libsyn_episode_id: 11390680
 images:
   - /19-miss-congeniality/cover.jpg
 ---

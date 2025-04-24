@@ -1,7 +1,7 @@
 ---
 title: "Episode 4: My Best Friend's Wedding (w/ Matt Woodland)"
 date: "2019-04-19T00:07:00.000Z"
-embed_url: https://anchor.fm/dustyvcr/embed/episodes/4-My-Best-Friends-Wedding-w-Matt-Woodland-e7sori
+libsyn_episode_id: 9452105
 ---
 
 Dusty VCR has its first ever guest! Comedian [Matt Woodland](https://www.instagram.com/matt.woodland/) joins the team to revisit the 1997 classic [_My Best Friend's Wedding_](https://www.imdb.com/title/tt0119738/), starring Julia Roberts, Dermott Mulroney, and Cameron Diaz.
