@@ -1,7 +1,7 @@
 ---
 title: "Episode 18: Overboard (w/ Matt Woodland)"
 date: "2021-07-04T00:00:00.000Z"
-embed_url: https://anchor.fm/dustyvcr/embed/episodes/18--Overboard-w-Matt-Woodland-e13trh4
+libsyn_episode_id: 11390685
 images:
   - /18-overboard/cover.jpg
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Episode 14: Saving Silverman"
 date: "2019-12-08T00:00:00.000Z"
-embed_url: https://anchor.fm/dustyvcr/embed/episodes/14--Saving-Silverman-e9dmtc
+libsyn_episode_id: 11390705
 images:
   - /14-saving-silverman/cover.jpg
 ---

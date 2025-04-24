@@ -1,7 +1,7 @@
 ---
 title: "Episode 8: Being John Malkovich (w/ Molly Hynes)"
 date: "2019-06-30T18:00:00.000Z"
-embed_url: https://anchor.fm/dustyvcr/embed/episodes/8-Being-John-Malkovich-w-Molly-Hynes-e7sord
+libsyn_episode_id: 10345652
 ---
 
 Local comedian Molly Hynes joins Dusty VCR to discuss the 1999 classic [_Being John Malkovich_](https://www.imdb.com/title/tt0120601/), starring John Cusack, Catherine Keener, Cameron Diaz, and John Malkovich.

@@ -1,7 +1,7 @@
 ---
 title: "Episode 17: Country Strong (w/ Tricia D'Onofrio)"
 date: "2020-03-07T00:00:00.000Z"
-embed_url: https://anchor.fm/dustyvcr/embed/episodes/17--Country-Strong-w-Tricia-DOnofrio-ebb1sp
+libsyn_episode_id: 11390690
 images:
   - /17-country-strong/cover.jpg
 ---
