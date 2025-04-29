@@ -44,15 +44,14 @@ Dusty VCR is available wherever you get your podcasts:
 
 <div class="badges">
 
-[![Listen on Apple Podcasts](apple-badge.svg)](https://itunes.apple.com/us/podcast/dusty-vcr/id1455432897)
-[![Listen on Spotify](spotify-badge.svg)](https://open.spotify.com/show/6dLxmDZjUs0NEN1teb4SZs)
+[![Listen on Apple Podcasts](apple-badge.svg)](https://podcasts.apple.com/us/podcast/dusty-vcr/id1811409441)
 [![Listen on Amazon Music](amazon-badge.png)](https://music.amazon.com/podcasts/f795531d-fa4a-4397-a8a4-28cf435e17ac)
 
 </div>
 
 Or, just enter our RSS feed:
 
-- [https://feeds.dustyvcr.com/dustyvcr](https://feeds.dustyvcr.com/dustyvcr)
+- <https://feeds.dustyvcr.com/dustyvcr>
 
 ## Contact
 
