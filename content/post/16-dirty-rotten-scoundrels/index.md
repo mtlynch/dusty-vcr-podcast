@@ -1,7 +1,7 @@
 ---
 title: "Episode 16: Dirty Rotten Scoundrels (w/ Penina Beede)"
 date: "2020-02-10T00:00:00.000Z"
-libsyn_episode_id: 11390695
+libsyn_episode_id: 35390695
 images:
   - /16-dirty-rotten-scoundrels/cover.jpg
 ---

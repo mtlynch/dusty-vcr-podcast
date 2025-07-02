@@ -1,7 +1,7 @@
 ---
 title: "Episode 21: Big (w/ Vally D and Matt Woodland)"
 date: "2022-03-27T00:00:00.000Z"
-libsyn_episode_id: 11390670
+libsyn_episode_id: 35390670
 images:
   - /21-big/cover.jpg
 ---
