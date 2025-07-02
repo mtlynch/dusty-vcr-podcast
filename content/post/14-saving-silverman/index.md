@@ -1,7 +1,7 @@
 ---
 title: "Episode 14: Saving Silverman"
 date: "2019-12-08T00:00:00.000Z"
-libsyn_episode_id: 11390705
+libsyn_episode_id: 35390705
 images:
   - /14-saving-silverman/cover.jpg
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Episode 20: Parenthood (w/ Michelle Talarico)"
 date: "2021-09-26T00:00:00.000Z"
-libsyn_episode_id: 11390675
+libsyn_episode_id: 35390675
 images:
   - /20-parenthood/cover.jpg
 ---

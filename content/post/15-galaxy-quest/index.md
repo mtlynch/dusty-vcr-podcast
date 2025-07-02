@@ -1,7 +1,7 @@
 ---
 title: "Episode 15: Galaxy Quest (w/ Sean Noah Noah)"
 date: "2019-12-23T00:00:00.000Z"
-libsyn_episode_id: 11390700
+libsyn_episode_id: 35390700
 images:
   - /15-galaxy-quest/cover.jpg
 ---
