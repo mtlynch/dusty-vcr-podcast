@@ -27,3 +27,8 @@
   from = "/movie-list"
   to = "https://docs.google.com/document/d/1-FrBSbp_zcF8kLvp8eHhAqktMGjApo9yEFMu33U4oqI/edit#"
   status = 302
+
+[[redirects]]
+  from = "/notes"
+  to = "https://docs.google.com/document/d/1PK2LFs5u860l3OpVeeUEMRCepIKAedfpRT7RKBaE7wA/edit?usp=sharing
+  status = 302
