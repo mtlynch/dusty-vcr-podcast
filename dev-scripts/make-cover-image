@@ -5,21 +5,67 @@ set -eux
 INPUT=$1
 EPISODE_NUMBER=$2
 MOVIE_TITLE=$3
+GUEST=$4
+
+# Configuration - Text positioning as percentages of image height
+# These determine how far from center the text appears (0-100, where 0 is center)
+TOP_TEXT_OFFSET_PERCENT=40    # Episode number position (35% up from center)
+BOTTOM_TEXT_OFFSET_PERCENT=18 # Movie title position (25% down from center)
+MAX_OFFSET_PERCENT=45         # Maximum offset to keep text within bounds
+
+# Configuration - Font size as percentage of image height
+EPISODE_FONT_SIZE_PERCENT=15  # Episode number font size
+TITLE_FONT_SIZE_PERCENT=20    # Movie title font size
+GUEST_FONT_SIZE_PERCENT=17    # Guest name font size
+
+# Configuration - Text styling
+TEXT_COLOR='#00FF00'
+STROKE_COLOR='black'
+STROKE_WIDTH=3
+
+
+# Get image dimensions before resizing
+DIMENSIONS=$(magick identify -format "%wx%h" "$INPUT")
+WIDTH=$(echo $DIMENSIONS | cut -d'x' -f1)
+HEIGHT=$(echo $DIMENSIONS | cut -d'x' -f2)
+
+# Clamp offsets to maximum to ensure text stays within bounds
+if [ $TOP_TEXT_OFFSET_PERCENT -gt $MAX_OFFSET_PERCENT ]; then
+  TOP_TEXT_OFFSET_PERCENT=$MAX_OFFSET_PERCENT
+fi
+if [ $BOTTOM_TEXT_OFFSET_PERCENT -gt $MAX_OFFSET_PERCENT ]; then
+  BOTTOM_TEXT_OFFSET_PERCENT=$MAX_OFFSET_PERCENT
+fi
+
+# Calculate pixel offsets from percentages (relative to center)
+TOP_OFFSET=$(echo "scale=0; $HEIGHT * $TOP_TEXT_OFFSET_PERCENT / 100" | bc)
+BOTTOM_OFFSET=$(echo "scale=0; $HEIGHT * $BOTTOM_TEXT_OFFSET_PERCENT / 100" | bc)
+
+# Calculate font sizes based on image height
+EPISODE_FONT_SIZE=$(echo "scale=0; $HEIGHT * $EPISODE_FONT_SIZE_PERCENT / 100" | bc)
+TITLE_FONT_SIZE=$(echo "scale=0; $HEIGHT * $TITLE_FONT_SIZE_PERCENT / 100" | bc)
+GUEST_FONT_SIZE=$(echo "scale=0; $HEIGHT * $GUEST_FONT_SIZE_PERCENT / 100" | bc)
+
+# Calculate guest text offset (below movie title)
+GUEST_OFFSET=$(echo "scale=0; $BOTTOM_OFFSET + ($TITLE_FONT_SIZE * 1.0)" | bc)
 
 # Find the episode directory and construct output path
 OUTPUT_FILE=$(ls -d "./content/post/${EPISODE_NUMBER}"*)
 OUTPUT_FILE+="/cover.webp"
 
 magick $INPUT \
--fill '#00FF00' \
--stroke black \
--strokewidth 3 \
+-fill "$TEXT_COLOR" \
+-stroke "$STROKE_COLOR" \
+-strokewidth $STROKE_WIDTH \
 -gravity center \
 -font Source-Sans-3-Bold \
--pointsize 190 \
--annotate +0-490 "Episode ${EPISODE_NUMBER}" \
+-pointsize $EPISODE_FONT_SIZE \
+-annotate +0-${TOP_OFFSET} "Episode ${EPISODE_NUMBER}" \
 -font Source-Sans-3-Bold-Italic \
--pointsize 180 \
--annotate +0+490 "${MOVIE_TITLE}" \
+-pointsize $TITLE_FONT_SIZE \
+-annotate +0+${BOTTOM_OFFSET} "${MOVIE_TITLE}" \
+-font Source-Sans-3-Bold \
+-pointsize $GUEST_FONT_SIZE \
+-annotate +0+${GUEST_OFFSET} "w/ ${GUEST}" \
 -resize "1200x>" \
 "${OUTPUT_FILE}"

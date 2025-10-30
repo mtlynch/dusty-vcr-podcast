@@ -34,6 +34,22 @@
         "type": "github"
       }
     },
+    "imagemagick-nixpkgs": {
+      "locked": {
+        "lastModified": 1760256791,
+        "narHash": "sha256-uTpzDHRASEDeFUuToWSQ46Re8beXyG9dx4W36FQa0/c=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "832e3b6db48508ae436c2c7bfc0cf914eac6938e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "832e3b6db48508ae436c2c7bfc0cf914eac6938e",
+        "type": "github"
+      }
+    },
     "nodejs-nixpkgs": {
       "locked": {
         "lastModified": 1700230496,
@@ -54,6 +70,7 @@
       "inputs": {
         "flake-utils": "flake-utils",
         "hugo-nixpkgs": "hugo-nixpkgs",
+        "imagemagick-nixpkgs": "imagemagick-nixpkgs",
         "nodejs-nixpkgs": "nodejs-nixpkgs"
       }
     },

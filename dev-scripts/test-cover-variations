@@ -1,0 +1,93 @@
+#!/usr/bin/env bash
+
+set -eux
+
+INPUT=~/scratch/Matilda-matilda-31436687-1280-720.jpg
+EPISODE_NUMBER=31
+MOVIE_TITLE=Matilda
+
+echo "=== Test 1: Working baseline (font name only, white text, single annotation) ==="
+magick $INPUT \
+-resize "1200x>" \
+-font Source-Sans-3-Bold \
+-fill white \
+-stroke black \
+-strokewidth 3 \
+-gravity center \
+-pointsize 100 \
+-annotate +0+0 "TEST" \
+/tmp/test1.webp
+echo "Created /tmp/test1.webp"
+
+echo ""
+echo "=== Test 2: Change to green fill (like production) ==="
+magick $INPUT \
+-resize "1200x>" \
+-font Source-Sans-3-Bold \
+-fill '#00FF00' \
+-stroke black \
+-strokewidth 3 \
+-gravity center \
+-pointsize 100 \
+-annotate +0+0 "TEST" \
+/tmp/test2.webp
+echo "Created /tmp/test2.webp"
+
+echo ""
+echo "=== Test 3: Use production pointsize and offset ==="
+magick $INPUT \
+-resize "1200x>" \
+-font Source-Sans-3-Bold \
+-fill '#00FF00' \
+-stroke black \
+-strokewidth 3 \
+-gravity center \
+-pointsize 190 \
+-annotate +0-490 "Episode ${EPISODE_NUMBER}" \
+/tmp/test3.webp
+echo "Created /tmp/test3.webp"
+
+echo ""
+echo "=== Test 4: Add second annotation with italic font ==="
+magick $INPUT \
+-resize "1200x>" \
+-gravity center \
+-font Source-Sans-3-Bold \
+-fill '#00FF00' \
+-stroke black \
+-strokewidth 3 \
+-pointsize 190 \
+-annotate +0-490 "Episode ${EPISODE_NUMBER}" \
+-font Source-Sans-3-Bold-Italic \
+-fill '#00FF00' \
+-stroke black \
+-strokewidth 3 \
+-pointsize 180 \
+-annotate +0+490 "${MOVIE_TITLE}" \
+/tmp/test4.webp
+echo "Created /tmp/test4.webp"
+
+echo ""
+echo "=== Test 5: Exact production script (should match make-cover-image) ==="
+magick $INPUT \
+-resize "1200x>" \
+-gravity center \
+-font Source-Sans-3-Bold \
+-fill '#00FF00' \
+-stroke black \
+-strokewidth 3 \
+-pointsize 190 \
+-annotate +0-490 "Episode ${EPISODE_NUMBER}" \
+-font Source-Sans-3-Bold-Italic \
+-fill '#00FF00' \
+-stroke black \
+-strokewidth 3 \
+-pointsize 180 \
+-annotate +0+490 "${MOVIE_TITLE}" \
+/tmp/test5.webp
+echo "Created /tmp/test5.webp"
+
+echo ""
+echo "=== All tests complete! ==="
+echo "View results with: ls -lh /tmp/test*.webp"
+echo "Compare file sizes - files with text should be slightly larger"
