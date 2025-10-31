@@ -1,12 +1,12 @@
 ---
-title: "Episode 31: Matilda (w/ Tricia D'Onofrio)"
+title: "Episode 31: Matilda (w/ Tricia Damboise)"
 date: 2025-10-30
 images:
   - /31-matilda/cover.webp
 libsyn_episode_id: 38850415
 ---
 
-Fan favorite [Tricia D'Onofrio](https://instagram.com/keylimepie4) returns to the podcast to talk about the 1996 film [_Matilda_](https://www.imdb.com/title/tt0117008/), starring Mara Wilson, Danny DeVito, and Rhea Perlman.
+Fan favorite [Tricia Damboise](https://instagram.com/keylimepie4) returns to the podcast to talk about the 1996 film [_Matilda_](https://www.imdb.com/title/tt0117008/), starring Mara Wilson, Danny DeVito, and Rhea Perlman.
 
 <!--more-->
 
