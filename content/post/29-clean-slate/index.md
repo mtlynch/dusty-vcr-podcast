@@ -1,8 +1,7 @@
 ---
 title: "Episode 29: Clean Slate"
 date: 2025-02-22
-images:
-  - /29-clean-slate/cover.webp
+image: cover.webp
 libsyn_episode_id: 35390750
 ---
 
