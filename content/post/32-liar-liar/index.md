@@ -1,8 +1,7 @@
 ---
 title: "Episode 32: Liar Liar"
 date: 2025-11-15
-images:
-  - /32-liar-liar/cover.webp
+image: cover.webp
 ---
 
 We welcome Emily Parker Woodland, Matt's sister-in-law, to the podcast to talk about the 1997 film [_Liar Liar_](https://www.imdb.com/title/tt0119528/), starring Jim Carrey, Maura Tierney, and Cary Elwes.
