@@ -2,8 +2,7 @@
 title: "Episode 20: Parenthood (w/ Michelle Talarico)"
 date: "2021-09-26T00:00:00.000Z"
 libsyn_episode_id: 35390675
-images:
-  - /20-parenthood/cover.jpg
+image: cover.jpg
 ---
 
 Comedian and podcast neighbor [Michelle Talarico](https://wanderjest.com/performer/michelle.talarico) (aka "Michy Badcakes") joins us to talk about 1989's Parenthood, starring Steve Martin, Mary Steenburgen, Dianne Wiest, and a young Joaquin Phoenix.

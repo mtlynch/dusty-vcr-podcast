@@ -1,5 +1,7 @@
 {{ define "content" }}
-  {{ with .Params.images }}{{ $.Scratch.Set "image" (index . 0) }}{{ end }}
+  {{ with .Params.image }}
+    {{ $.Scratch.Set "image" (printf "%s/%s" $.RelPermalink .) }}
+  {{ end }}
 
 
   <h1>{{ .Title }}</h1>
@@ -8,7 +10,9 @@
       {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") }}
     </p>
 
-    <img src="{{ .Scratch.Get "image" }}" />
+    {{ if .Scratch.Get "image" }}
+      <img src="{{ .Scratch.Get "image" }}" />
+    {{ end }}
     {{ partial "tags" . }}
 
 
