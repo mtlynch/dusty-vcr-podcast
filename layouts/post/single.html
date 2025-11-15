@@ -1,18 +1,12 @@
 {{ define "content" }}
-  {{ $image := "" }}
-  {{ with .Params.image }}
-    {{ $image = printf "%s/%s" $.RelPermalink . }}
-  {{ end }}
-
-
   <h1>{{ .Title }}</h1>
   <div class="episode-wrapper">
     <p class="date">
       {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") }}
     </p>
 
-    {{ if $image }}
-      <img src="{{ $image }}" />
+    {{ with .Params.image }}
+      <img src="{{ printf "%s/%s" $.RelPermalink . }}" />
     {{ end }}
     {{ partial "tags" . }}
 
