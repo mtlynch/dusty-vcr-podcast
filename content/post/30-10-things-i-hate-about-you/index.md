@@ -1,8 +1,7 @@
 ---
 title: "Episode 30: 10 Things I Hate About You (w/ Chrissy P)"
 date: 2025-04-23
-images:
-  - /30-10-things-i-hate-about-you/cover.webp
+image: cover.webp
 libsyn_episode_id: 36288040
 ---
 

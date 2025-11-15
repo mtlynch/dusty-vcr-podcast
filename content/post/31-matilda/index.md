@@ -1,8 +1,7 @@
 ---
 title: "Episode 31: Matilda (w/ Tricia Damboise)"
 date: 2025-10-30
-images:
-  - /31-matilda/cover.webp
+image: cover.webp
 libsyn_episode_id: 38850415
 ---
 

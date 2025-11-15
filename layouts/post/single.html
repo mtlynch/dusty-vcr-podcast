@@ -1,14 +1,13 @@
 {{ define "content" }}
-  {{ with .Params.images }}{{ $.Scratch.Set "image" (index . 0) }}{{ end }}
-
-
   <h1>{{ .Title }}</h1>
   <div class="episode-wrapper">
     <p class="date">
       {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") }}
     </p>
 
-    <img src="{{ .Scratch.Get "image" }}" />
+    {{ with .Params.image }}
+      <img src="{{ printf "%s/%s" $.RelPermalink . }}" />
+    {{ end }}
     {{ partial "tags" . }}
 
 

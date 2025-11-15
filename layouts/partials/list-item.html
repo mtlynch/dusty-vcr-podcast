@@ -6,8 +6,10 @@
 
 
   <h2><a href="{{ $link }}">{{ .Title }}</a></h2>
-  {{ with .Params.images }}
-    <a href="{{ $link }}"><img src="{{ index . 0 }}" /></a>
+  {{ with .Params.image }}
+    <a href="{{ $link }}"
+      ><img src="{{ printf "%s/%s" $.RelPermalink . }}"
+    /></a>
   {{ end }}
 
   {{ .Summary }}
