@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -e
+set -u
+set -o pipefail
+
+curl --request POST \
+     --url "https://api.bunny.net/pullzone/${BUNNY_CDN_PULL_ZONE_ID}/purgeCache" \
+     --header "AccessKey: ${BUNNY_API_KEY}" \
+     --header 'accept: application/json' \
+     --header 'content-type: application/json' \
+     --write-out "\nHTTP Status Code: %{http_code}\n"
