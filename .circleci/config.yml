@@ -53,8 +53,18 @@ jobs:
               --auth "${NETLIFY_AUTH_TOKEN}" \
               --site="${NETLIFY_SITE_ID}" \
               --prod
+  purge_cache:
+    docker:
+      - image: cimg/base:stable
+    environment:
+      BUNNY_CDN_PULL_ZONE_ID: "934697"
+    resource_class: small
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ./
       - run:
-          name: Purge RSS cache from Bunny CDN
+          name: Purge cache from Bunny CDN
           command: |
             BUNNY_CDN_PULL_ZONE_ID='934697' ./dev-scripts/purge-bunny-cache
 workflows:
@@ -72,3 +82,6 @@ workflows:
           filters:
             branches:
               only: master
+      - purge_cache:
+          requires:
+            - deploy
