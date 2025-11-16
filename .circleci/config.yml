@@ -64,7 +64,7 @@ jobs:
       - attach_workspace:
           at: ./
       - run:
-          name: Purge cache from Bunny CDN
+          name: Purge RSS cache from Bunny CDN
           command: |
             BUNNY_CDN_PULL_ZONE_ID='934697' ./dev-scripts/purge-bunny-cache
 workflows:
