@@ -1,7 +1,7 @@
 ---
 title: "Episode 20: Parenthood (w/ Michelle Talarico)"
 date: "2021-09-26T00:00:00.000Z"
-libsyn_episode_id: 35390675
+audio_src: "https://dusty-vcr-data.b-cdn.net/episodes/2021-09-26_20-parenthood/5453ede1-19c2-42a3-b37a-83ce35b825cf.mp3"
 image: cover.jpg
 ---
 

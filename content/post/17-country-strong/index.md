@@ -1,7 +1,7 @@
 ---
 title: "Episode 17: Country Strong (w/ Tricia D'Onofrio)"
 date: "2020-03-07T00:00:00.000Z"
-libsyn_episode_id: 35390690
+audio_src: "https://dusty-vcr-data.b-cdn.net/episodes/2020-03-07_17-country-strong/017-country-strong.mp3"
 image: cover.jpg
 ---
 

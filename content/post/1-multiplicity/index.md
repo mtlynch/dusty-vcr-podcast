@@ -1,7 +1,7 @@
 ---
 title: "Episode 1: Multiplicity"
 date: "2019-03-06T00:00:00.000Z"
-libsyn_episode_id: 8908049
+audio_src: "https://dusty-vcr-data.b-cdn.net/episodes/2019-03-07_1-multiplicity/1-multiplicity.mp3"
 ---
 
 In the premiere episode of _Dusty VCR_, Michael, Rachel, and Xena discuss the 1999 film, [Multiplicity](https://www.imdb.com/title/tt0117108/), starring Michael Keaton and Andie MacDowell.

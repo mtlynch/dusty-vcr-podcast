@@ -1,7 +1,7 @@
 ---
 title: "Episode 23: Back to the Future (w/ Buddha Joe)"
 date: "2022-09-14T00:00:00-04:00"
-libsyn_episode_id: 35390660
+audio_src: "https://dusty-vcr-data.b-cdn.net/episodes/2022-09-15_23-back-to-the-future/e824d04c-a866-e884-7554-d6da37c4ea77.mp3"
 image: cover.jpg
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Episode 6: Kindergarten Cop (w/ Kathy Lynch)"
 date: "2019-05-26T23:04:00.000Z"
-libsyn_episode_id: 9929258
+audio_src: "https://dusty-vcr-data.b-cdn.net/episodes/2019-05-26_6-kindergarten-cop/6-kindergarten-cop.mp3"
 ---
 
 Comedian and writer Kathy Lynch joins Dusty VCR to re-watch the ever-quotable 1990 classic _Kindergarten Cop_, starring Arnold Schwarzenegger, Pamela Reed, and Penelope Ann Miller.

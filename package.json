@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "mtlynch.io dev scripts",
   "scripts": {
-    "check-format": "prettier --ignore-path .gitignore --check ./",
-    "format": "prettier --ignore-path .gitignore --write ./"
+    "check-format": "prettier --ignore-path .prettierignore --check ./",
+    "format": "prettier --ignore-path .prettierignore --write ./"
   },
   "author": "Michael Lynch",
   "devDependencies": {

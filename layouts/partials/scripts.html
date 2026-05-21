@@ -1,6 +1,12 @@
 <!-- custom -->
 {{ range .Site.Params.js }}<script src="{{ . | absURL }}"></script>{{ end }}
 
+{{ if .Params.audio_src }}
+  <!-- plyr -->
+  <script src="{{ "third-party/plyr/3.8.4/plyr.min.js" | absURL }}"></script>
+  <script src="{{ "js/player.js" | absURL }}"></script>
+{{ end }}
+
 
 <!-- jquery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
