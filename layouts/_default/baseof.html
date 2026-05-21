@@ -9,9 +9,9 @@
       <link rel="icon" href="{{ .Site.Params.favicon | absURL }}" />
     {{ end }}
 
-    {{ partial "css" . }}
+    {{ partial "head-assets.html" . }}
 
-    {{ partial "js" . }}
+    {{ partial "scripts.html" . }}
 
     {{ hugo.Generator }}
 
