@@ -1,7 +1,7 @@
 ---
 title: "Episode 14: Saving Silverman"
 date: "2019-12-08T00:00:00.000Z"
-libsyn_episode_id: 35390705
+audio_src: "https://dusty-vcr-data.b-cdn.net/episodes/2019-12-09_14-saving-silverman/37165411-44100-1-c0ec2eb4d5eb9.mp3"
 image: cover.jpg
 ---
 

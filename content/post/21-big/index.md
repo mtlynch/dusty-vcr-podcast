@@ -1,7 +1,7 @@
 ---
 title: "Episode 21: Big (w/ Vally D and Matt Woodland)"
 date: "2022-03-27T00:00:00.000Z"
-libsyn_episode_id: 35390670
+audio_src: "https://dusty-vcr-data.b-cdn.net/episodes/2022-03-27_21-big/b66ace1b-e98e-0d89-8eaa-186a083b131e.mp3"
 image: cover.jpg
 ---
 

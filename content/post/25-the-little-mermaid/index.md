@@ -1,7 +1,7 @@
 ---
 title: "Episode 25: The Little Mermaid (w/ Chrissy P)"
 date: 2022-11-27T00:00:00-04:00
-libsyn_episode_id: 35390650
+audio_src: "https://dusty-vcr-data.b-cdn.net/episodes/2022-11-27_25-the-little-mermaid/dcaa8705-d7d0-7aeb-4b09-39c3b27f556c.mp3"
 image: cover.jpg
 ---
 

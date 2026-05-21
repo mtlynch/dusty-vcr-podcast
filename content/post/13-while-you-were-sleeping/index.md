@@ -1,7 +1,7 @@
 ---
 title: "Episode 13: While You Were Sleeping (w/ Matt Woodland)"
 date: "2019-11-14T00:00:00.000Z"
-libsyn_episode_id: 35390710
+audio_src: "https://dusty-vcr-data.b-cdn.net/episodes/2019-11-14_13-while-you-were-sleeping/34188650-44100-1-dd10eadcdb30c.mp3"
 image: cover.jpg
 ---
 

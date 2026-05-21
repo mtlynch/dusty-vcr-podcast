@@ -2,7 +2,7 @@
 title: "Episode 30: 10 Things I Hate About You (w/ Chrissy P)"
 date: 2025-04-23
 image: cover.webp
-libsyn_episode_id: 36288040
+audio_src: "https://dusty-vcr-data.b-cdn.net/episodes/2025-04-23_30-10-things-i-hate-about-you/030-10-things-i-hate-about-you.mp3"
 ---
 
 Chrissy P returns to the pod to discuss her favorite movie, 1999's _10 Things I Hate About You_.

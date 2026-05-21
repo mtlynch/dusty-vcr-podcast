@@ -1,7 +1,7 @@
 ---
 title: "Episode 18: Overboard (w/ Matt Woodland)"
 date: "2021-07-04T00:00:00.000Z"
-libsyn_episode_id: 35390685
+audio_src: "https://dusty-vcr-data.b-cdn.net/episodes/2021-07-04_18-overboard/0782a278-d388-67d3-b1d4-719369ac1a0c.mp3"
 image: cover.jpg
 ---
 

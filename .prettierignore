@@ -1,0 +1,16 @@
+# Built pages
+public/
+
+# Mac files
+.DS_Store
+
+# Vim temp files
+*.sw?
+
+node_modules/
+resources/
+.hugo_build.lock
+.direnv
+
+# Vendored third-party assets
+static/third-party/

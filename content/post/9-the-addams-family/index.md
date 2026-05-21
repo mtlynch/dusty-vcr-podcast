@@ -1,7 +1,7 @@
 ---
 title: "Episode 9: The Addams Family (w/ Chris Lund)"
 date: "2019-07-28T23:39:00.000Z"
-libsyn_episode_id: 10686272
+audio_src: "https://dusty-vcr-data.b-cdn.net/episodes/2019-07-28_9-the-addams-family/009-the_addams_family.mp3"
 ---
 
 Our friend Chris Lund joins us to discuss the 1991 comedy, [_The Addams Family_](https://www.imdb.com/title/tt0101272/), starring Raul Julia, Anjelica Huston, and Christina Ricci.

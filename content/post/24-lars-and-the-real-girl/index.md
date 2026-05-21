@@ -1,7 +1,7 @@
 ---
 title: "Episode 24: Lars and the Real Girl (w/ Xena Dreyfuss)"
 date: 2022-10-07T00:00:00-04:00
-libsyn_episode_id: 35390655
+audio_src: "https://dusty-vcr-data.b-cdn.net/episodes/2022-10-07_24-lars-and-the-real-girl/48a9d6bf-af7b-8a3a-ad8a-d8899662e544.mp3"
 image: cover.jpg
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Episode 22: Notting Hill (w/ Sue Lynch and Matt Woodland)"
 date: "2022-05-08T00:00:00.000Z"
-libsyn_episode_id: 35390665
+audio_src: "https://dusty-vcr-data.b-cdn.net/episodes/2022-05-08_22-notting-hill/9c7dfa55-4ab7-a395-e935-1fd747f1e198.mp3"
 image: cover.jpg
 ---
 

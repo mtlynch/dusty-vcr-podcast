@@ -1,7 +1,7 @@
 ---
 title: "Episode 19: Miss Congeniality (w/ Tricia D'Onofrio)"
 date: "2021-08-17T00:00:00.000Z"
-libsyn_episode_id: 35390680
+audio_src: "https://dusty-vcr-data.b-cdn.net/episodes/2021-08-18_19-miss-congeniality/9b8cd3a3-5a0d-de71-c7ef-b8ac31fed6ef.mp3"
 image: cover.jpg
 ---
 

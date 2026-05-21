@@ -1,7 +1,7 @@
 ---
 title: "Episode 27: Romy and Michele's High School Reunion (w/ Emily Mame Ford)"
 date: 2023-11-09T00:00:00-04:00
-libsyn_episode_id: 35390640
+audio_src: "https://dusty-vcr-data.b-cdn.net/episodes/2023-11-10_27-romy-and-micheles-high-school-reunion/d9071f07-dac4-2fb8-31eb-3f698dd6c77f.mp3"
 image: cover.jpg
 ---
 
