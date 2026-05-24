@@ -27,6 +27,7 @@
       imagemagick = imagemagick-nixpkgs.legacyPackages.${system}.imagemagick;
       source-sans = imagemagick-nixpkgs.legacyPackages.${system}.source-sans;
       bc = imagemagick-nixpkgs.legacyPackages.${system}.bc;
+      python = imagemagick-nixpkgs.legacyPackages.${system}.python3;
     in {
       devShells.default = hugo-nixpkgs.legacyPackages.${system}.mkShell {
         packages = [
@@ -35,10 +36,12 @@
           imagemagick
           source-sans
           bc
+          python
         ];
 
         shellHook = ''
           echo "node" "$(node --version)"
+          python --version
           hugo version
           magick --version | head -n 1
           bc --version | head -n 1

@@ -1,71 +1,391 @@
-#!/usr/bin/env bash
+#!/usr/bin/env python3
 
-set -eux
-
-INPUT=$1
-EPISODE_NUMBER=$2
-MOVIE_TITLE=$3
-GUEST=$4
-
-# Configuration - Text positioning as percentages of image height
-# These determine how far from center the text appears (0-100, where 0 is center)
-TOP_TEXT_OFFSET_PERCENT=40    # Episode number position (35% up from center)
-BOTTOM_TEXT_OFFSET_PERCENT=22 # Movie title position (25% down from center)
-MAX_OFFSET_PERCENT=45         # Maximum offset to keep text within bounds
-
-# Configuration - Font size as percentage of image height
-EPISODE_FONT_SIZE_PERCENT=18  # Episode number font size
-TITLE_FONT_SIZE_PERCENT=16    # Movie title font size
-GUEST_FONT_SIZE_PERCENT=12    # Guest name font size
-
-# Configuration - Text styling
-TEXT_COLOR='#00FF00'
-STROKE_COLOR='black'
-STROKE_WIDTH=3
+import argparse
+import itertools
+import shutil
+import subprocess
+import tempfile
+from dataclasses import dataclass
+from pathlib import Path
 
 
-# Get image dimensions before resizing
-DIMENSIONS=$(magick identify -format "%wx%h" "$INPUT")
-WIDTH=$(echo $DIMENSIONS | cut -d'x' -f1)
-HEIGHT=$(echo $DIMENSIONS | cut -d'x' -f2)
+TEXT_COLOR = "#00FF00"
+STROKE_COLOR = "black"
+OUTPUT_MAX_WIDTH = 1200
 
-# Clamp offsets to maximum to ensure text stays within bounds
-if [ $TOP_TEXT_OFFSET_PERCENT -gt $MAX_OFFSET_PERCENT ]; then
-  TOP_TEXT_OFFSET_PERCENT=$MAX_OFFSET_PERCENT
-fi
-if [ $BOTTOM_TEXT_OFFSET_PERCENT -gt $MAX_OFFSET_PERCENT ]; then
-  BOTTOM_TEXT_OFFSET_PERCENT=$MAX_OFFSET_PERCENT
-fi
+EPISODE_FONT = "Source-Sans-3-Bold"
+TITLE_FONT = "Source-Sans-3-Bold-Italic"
+GUEST_FONT = "Source-Sans-3-Bold"
 
-# Calculate pixel offsets from percentages (relative to center)
-TOP_OFFSET=$(echo "scale=0; $HEIGHT * $TOP_TEXT_OFFSET_PERCENT / 100" | bc)
-BOTTOM_OFFSET=$(echo "scale=0; $HEIGHT * $BOTTOM_TEXT_OFFSET_PERCENT / 100" | bc)
+TITLE_FONT_RATIO = 0.9
+GUEST_FONT_RATIO = 0.65
 
-# Calculate font sizes based on image height
-EPISODE_FONT_SIZE=$(echo "scale=0; $HEIGHT * $EPISODE_FONT_SIZE_PERCENT / 100" | bc)
-TITLE_FONT_SIZE=$(echo "scale=0; $HEIGHT * $TITLE_FONT_SIZE_PERCENT / 100" | bc)
-GUEST_FONT_SIZE=$(echo "scale=0; $HEIGHT * $GUEST_FONT_SIZE_PERCENT / 100" | bc)
 
-# Calculate guest text offset (below movie title)
-GUEST_OFFSET=$(echo "scale=0; $BOTTOM_OFFSET + ($TITLE_FONT_SIZE * 1.0)" | bc)
+@dataclass(frozen=True)
+class Size:
+    width: int
+    height: int
 
-# Find the episode directory and construct output path
-OUTPUT_FILE=$(ls -d "./content/post/${EPISODE_NUMBER}"*)
-OUTPUT_FILE+="/cover.webp"
 
-magick $INPUT \
--fill "$TEXT_COLOR" \
--stroke "$STROKE_COLOR" \
--strokewidth $STROKE_WIDTH \
--gravity center \
--font Source-Sans-3-Bold \
--pointsize $EPISODE_FONT_SIZE \
--annotate +0-${TOP_OFFSET} "Episode ${EPISODE_NUMBER}" \
--font Source-Sans-3-Bold-Italic \
--pointsize $TITLE_FONT_SIZE \
--annotate +0+${BOTTOM_OFFSET} "${MOVIE_TITLE}" \
--font Source-Sans-3-Bold \
--pointsize $GUEST_FONT_SIZE \
--annotate +0+${GUEST_OFFSET} "w/ ${GUEST}" \
--resize "1200x>" \
-"${OUTPUT_FILE}"
+@dataclass(frozen=True)
+class Box:
+    x: int
+    y: int
+    width: int
+    height: int
+
+
+@dataclass(frozen=True)
+class Label:
+    text: str
+    font: str
+    point_size: int
+    size: Size
+
+
+@dataclass(frozen=True)
+class BottomLayout:
+    title: Label
+    guest: Label | None
+    gap: int
+    height: int
+
+
+def run_magick(args: list[str]) -> str:
+    return subprocess.run(
+        ["magick", *args],
+        check=True,
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+    ).stdout
+
+
+def image_size(input_path: Path) -> Size:
+    width, height = run_magick(["identify", "-format", "%w %h", str(input_path)]).split()
+    return Size(int(width), int(height))
+
+
+def measure_label(text: str, font: str, point_size: int, stroke_width: int) -> Size:
+    width, height = run_magick(
+        [
+            "-background",
+            "none",
+            "-font",
+            font,
+            "-pointsize",
+            str(point_size),
+            "-fill",
+            TEXT_COLOR,
+            "-stroke",
+            STROKE_COLOR,
+            "-strokewidth",
+            str(stroke_width),
+            f"label:{text}",
+            "-format",
+            "%w %h",
+            "info:",
+        ]
+    ).split()
+    return Size(int(width), int(height))
+
+
+def render_label(label: Label, stroke_width: int, output_path: Path) -> None:
+    run_magick(
+        [
+            "-background",
+            "none",
+            "-font",
+            label.font,
+            "-pointsize",
+            str(label.point_size),
+            "-fill",
+            TEXT_COLOR,
+            "-stroke",
+            STROKE_COLOR,
+            "-strokewidth",
+            str(stroke_width),
+            f"label:{label.text}",
+            str(output_path),
+        ]
+    )
+
+
+def title_candidates(title: str) -> list[str]:
+    words = title.split()
+    if len(words) < 3:
+        return [title]
+
+    max_lines = 3 if len(words) >= 6 else 2
+    candidates = {title}
+    break_points = range(1, len(words))
+
+    for line_count in range(2, max_lines + 1):
+        wrapped = []
+        for breaks in itertools.combinations(break_points, line_count - 1):
+            starts = (0, *breaks)
+            ends = (*breaks, len(words))
+            lines = [" ".join(words[start:end]) for start, end in zip(starts, ends)]
+            line_lengths = [len(line) for line in lines]
+            max_line_length = max(line_lengths)
+            min_line_length = min(line_lengths)
+            wrapped.append(
+                (
+                    "\n".join(lines),
+                    (max_line_length * 100) + (max_line_length - min_line_length),
+                )
+            )
+
+        for candidate, _score in sorted(wrapped, key=lambda item: item[1])[:4]:
+            candidates.add(candidate)
+
+    return sorted(
+        candidates,
+        key=lambda candidate: (candidate.count("\n"), len(candidate)),
+    )
+
+
+def fitting_label(
+    text: str,
+    font: str,
+    box: Box,
+    stroke_width: int,
+    high: int,
+) -> Label:
+    low = 1
+    best = Label(text, font, 1, measure_label(text, font, 1, stroke_width))
+
+    while low <= high:
+        point_size = (low + high) // 2
+        size = measure_label(text, font, point_size, stroke_width)
+        if size.width <= box.width and size.height <= box.height:
+            best = Label(text, font, point_size, size)
+            low = point_size + 1
+        else:
+            high = point_size - 1
+
+    return best
+
+
+def bottom_layout(
+    title: str,
+    guest: str | None,
+    box: Box,
+    stroke_width: int,
+    high: int,
+) -> BottomLayout:
+    best: BottomLayout | None = None
+
+    for candidate in title_candidates(title):
+        if guest is None:
+            title_label = fitting_label(candidate, TITLE_FONT, box, stroke_width, high)
+            candidate_best = BottomLayout(title_label, None, 0, title_label.size.height)
+            if best is None or layout_score(candidate_best) > layout_score(best):
+                best = candidate_best
+            continue
+
+        guest_text = f"w/ {guest}"
+        low = 1
+        candidate_best: BottomLayout | None = None
+
+        while low <= high:
+            base_size = (low + high) // 2
+            title_size = max(1, round(base_size * TITLE_FONT_RATIO))
+            guest_size = max(1, round(base_size * GUEST_FONT_RATIO))
+            title_label = Label(
+                candidate,
+                TITLE_FONT,
+                title_size,
+                measure_label(candidate, TITLE_FONT, title_size, stroke_width),
+            )
+            guest_label = Label(
+                guest_text,
+                GUEST_FONT,
+                guest_size,
+                measure_label(guest_text, GUEST_FONT, guest_size, stroke_width),
+            )
+            gap = max(stroke_width * 2, round(base_size * 0.08))
+            block_height = title_label.size.height + gap + guest_label.size.height
+            fits = (
+                title_label.size.width <= box.width
+                and guest_label.size.width <= box.width
+                and block_height <= box.height
+            )
+
+            if fits:
+                candidate_best = BottomLayout(title_label, guest_label, gap, block_height)
+                low = base_size + 1
+            else:
+                high = base_size - 1
+
+        if candidate_best is None:
+            continue
+
+        if best is None or layout_score(candidate_best) > layout_score(best):
+            best = candidate_best
+
+    if best is None:
+        raise ValueError("could not fit title and guest text into the image")
+
+    return best
+
+
+def layout_score(layout: BottomLayout) -> tuple[int, int, int]:
+    return (layout.title.point_size, -layout.title.text.count("\n"), -layout.height)
+
+
+def output_file_for_episode(episode_number: str) -> Path:
+    post_root = Path("content/post")
+    matches = sorted(
+        path
+        for path in post_root.iterdir()
+        if path.is_dir() and path.name.startswith(f"{episode_number}-")
+    )
+
+    if len(matches) != 1:
+        match_list = ", ".join(str(match) for match in matches) or "none"
+        raise ValueError(
+            f"expected one content directory for episode {episode_number}; found {match_list}"
+        )
+
+    return matches[0] / "cover.webp"
+
+
+def centered_x(box: Box, label: Label) -> int:
+    return box.x + ((box.width - label.size.width) // 2)
+
+
+def clamped_y(y: int, block_height: int, image_height: int) -> int:
+    return min(max(0, y), max(0, image_height - block_height))
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--guest",
+        help="Guest name to render below the movie title.",
+    )
+    parser.add_argument(
+        "--top-offset",
+        default=0,
+        type=int,
+        help="Vertical pixel adjustment for the episode text. Positive values move it down.",
+    )
+    parser.add_argument(
+        "--bottom-offset",
+        default=0,
+        type=int,
+        help="Vertical pixel adjustment for the title and guest block. Positive values move it down.",
+    )
+    parser.add_argument("input", type=Path)
+    parser.add_argument("episode_number")
+    parser.add_argument("movie_title")
+    return parser.parse_args()
+
+
+def main() -> None:
+    args = parse_args()
+
+    if shutil.which("magick") is None:
+        raise RuntimeError("ImageMagick is required, but `magick` was not found in PATH")
+
+    source_size = image_size(args.input)
+    min_dimension = min(source_size.width, source_size.height)
+    margin_x = max(24, round(source_size.width * 0.06))
+    margin_y = max(24, round(source_size.height * 0.06))
+    stroke_width = max(2, round(min_dimension * 0.004))
+    text_width = max(1, source_size.width - (margin_x * 2))
+    top_box = Box(
+        margin_x,
+        margin_y,
+        text_width,
+        max(1, (source_size.height // 3) - margin_y),
+    )
+    bottom_start = source_size.height // 2
+    bottom_box = Box(
+        margin_x,
+        bottom_start,
+        text_width,
+        max(1, source_size.height - bottom_start - margin_y),
+    )
+    max_point_size = max(12, source_size.height // 2)
+    episode = fitting_label(
+        f"Episode {args.episode_number}",
+        EPISODE_FONT,
+        top_box,
+        stroke_width,
+        max_point_size,
+    )
+    bottom = bottom_layout(
+        args.movie_title,
+        args.guest,
+        bottom_box,
+        stroke_width,
+        max_point_size,
+    )
+    episode_y = clamped_y(
+        top_box.y + ((top_box.height - episode.size.height) // 2) + args.top_offset,
+        episode.size.height,
+        source_size.height,
+    )
+    bottom_y = clamped_y(
+        bottom_box.y + ((bottom_box.height - bottom.height) // 2) + args.bottom_offset,
+        bottom.height,
+        source_size.height,
+    )
+    title_y = bottom_y
+    output_file = output_file_for_episode(args.episode_number)
+
+    with tempfile.TemporaryDirectory(prefix="cover-image-") as temp_dir_name:
+        temp_dir = Path(temp_dir_name)
+        episode_image = temp_dir / "episode.png"
+        title_image = temp_dir / "title.png"
+
+        render_label(episode, stroke_width, episode_image)
+        render_label(bottom.title, stroke_width, title_image)
+
+        command = [
+            str(args.input),
+            str(episode_image),
+            "-geometry",
+            f"+{centered_x(top_box, episode)}+{episode_y}",
+            "-composite",
+            str(title_image),
+            "-geometry",
+            f"+{centered_x(bottom_box, bottom.title)}+{title_y}",
+            "-composite",
+        ]
+
+        if bottom.guest is not None:
+            guest_image = temp_dir / "guest.png"
+            guest_y = title_y + bottom.title.size.height + bottom.gap
+            render_label(bottom.guest, stroke_width, guest_image)
+            command.extend(
+                [
+                    str(guest_image),
+                    "-geometry",
+                    f"+{centered_x(bottom_box, bottom.guest)}+{guest_y}",
+                    "-composite",
+                ]
+            )
+
+        command.extend(["-resize", f"{OUTPUT_MAX_WIDTH}x>", str(output_file)])
+        run_magick(command)
+
+    print(f"Created {output_file}")
+    layout_parts = [
+        f"episode={episode.point_size}px",
+        f"title={bottom.title.point_size}px",
+    ]
+    if bottom.guest is not None:
+        layout_parts.append(f"guest={bottom.guest.point_size}px")
+    layout_parts.append(f"stroke={stroke_width}px")
+    if args.top_offset != 0:
+        layout_parts.append(f"top_offset={args.top_offset}px")
+    if args.bottom_offset != 0:
+        layout_parts.append(f"bottom_offset={args.bottom_offset}px")
+    print(f"Layout: {', '.join(layout_parts)}")
+
+
+if __name__ == "__main__":
+    main()
